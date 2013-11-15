@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Just a Blahg</title>
+    <link href="http://ikso.us/feed.xml" rel="self" />
+    <link href="http://ikso.us/" />
+    <updated>2013-11-15T11:54:52+05:00</updated>
+    <id>http://ikso.us/</id>
+    <entry>
+        <title type="html"><![CDATA[Post in the first.]]></title>
+        <author><name>ikso</name></author>
+        <link href="http://ikso.us/2013/test.html"/>
+        <published>2013-11-15T00:00:00+05:00</published>
+        <updated>2013-11-15T11:54:52+05:00</updated>
+        <id>http://ikso.us/2013/test.html</id>
+        <category scheme="http://ikso.us/tag/boring-posts/" term="boring posts" label="boring posts" />
+        <content type="html" xml:base="http://ikso.us" xml:lang="en">
+            <![CDATA[ <p>Half past November. Work continues as normal.</p>
+]]>
+        </content>
+    </entry>
+</feed>
