@@ -3,9 +3,22 @@
     <title>Just a Blahg</title>
     <link href="http://ikso.us/feed.xml" rel="self" />
     <link href="http://ikso.us/" />
-    <updated>2013-11-15T11:54:52+05:00</updated>
+    <updated>2013-11-16T01:07:43+05:00</updated>
     <id>http://ikso.us/</id>
     <entry>
+        <title type="html"><![CDATA[New day, new attempt]]></title>
+        <author><name>ikso</name></author>
+        <link href="http://ikso.us/2013/2013-11-16-00-58.html"/>
+        <published>2013-11-16T00:00:00+05:00</published>
+        <updated>2013-11-16T01:07:43+05:00</updated>
+        <id>http://ikso.us/2013/2013-11-16-00-58.html</id>
+        <category scheme="http://ikso.us/tag/boring-posts/" term="boring posts" label="boring posts" />
+        <content type="html" xml:base="http://ikso.us" xml:lang="en">
+            <![CDATA[ <p>Just finished a little work with <a href="https://github.com/lepture/liquidluck">liquidluck</a>. i hadn&#39;t heard of it before, but <a href="http://zigg.com">zigg</a> mentioned it, so i thought i would give it a try. Honestly, i wasn&#39;t really sure about yet another static site generator, but so far i am impressed. Now if only i can keep writing things down.</p>
+<p>i will also hopefully get the template i made for it packaged up. i&#39;m not completely satisfied with it, but it will keep me going for the time being. But for now, it&#39;s time to sleep.</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[Post in the first.]]></title>
         <author><name>ikso</name></author>
         <link href="http://ikso.us/2013/test.html"/>
