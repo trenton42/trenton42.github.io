@@ -3,9 +3,23 @@
     <title>Just a Blahg</title>
     <link href="http://ikso.us/feed.xml" rel="self" />
     <link href="http://ikso.us/" />
-    <updated>2013-11-16T01:07:43+05:00</updated>
+    <updated>2013-11-18T10:35:12+05:00</updated>
     <id>http://ikso.us/</id>
     <entry>
+        <title type="html"><![CDATA[Theme Uploaded]]></title>
+        <author><name>ikso</name></author>
+        <link href="http://ikso.us/2013/2013-11-18-09-34.html"/>
+        <published>2013-11-18T00:00:00+05:00</published>
+        <updated>2013-11-18T10:35:12+05:00</updated>
+        <id>http://ikso.us/2013/2013-11-18-09-34.html</id>
+        <category scheme="http://ikso.us/tag/code/" term="code" label="code" />
+        <content type="html" xml:base="http://ikso.us" xml:lang="en">
+            <![CDATA[ <p>I whipped up this theme for <a href="https://github.com/lepture/liquidluck">liquidluck</a> recently. It is based on Bootstrap 3, and doesn&#39;t contain many bells or whistles (as you can see).</p>
+<p>Clone it here <a href="https://github.com/trenton42/liquidluck-theme-bootstrap3">https://github.com/trenton42/liquidluck-theme-bootstrap3</a></p>
+<p>i will (hopefully) be working on some improvements in the future.</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[New day, new attempt]]></title>
         <author><name>ikso</name></author>
         <link href="http://ikso.us/2013/2013-11-16-00-58.html"/>
