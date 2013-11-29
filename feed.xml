@@ -3,9 +3,22 @@
     <title>Just a Blahg</title>
     <link href="http://ikso.us/feed.xml" rel="self" />
     <link href="http://ikso.us/" />
-    <updated>2013-11-18T10:35:12+05:00</updated>
+    <updated>2013-11-29T15:56:17+05:00</updated>
     <id>http://ikso.us/</id>
     <entry>
+        <title type="html"><![CDATA[Black Friday.]]></title>
+        <author><name>ikso</name></author>
+        <link href="http://ikso.us/2013/2013-11-29-15-12.html"/>
+        <published>2013-11-29T00:00:00+05:00</published>
+        <updated>2013-11-29T15:56:17+05:00</updated>
+        <id>http://ikso.us/2013/2013-11-29-15-12.html</id>
+        <category scheme="http://ikso.us/tag/life/" term="life" label="life" />
+        <content type="html" xml:base="http://ikso.us" xml:lang="en">
+            <![CDATA[ <p>Black Friday means something quite different to me. See, three years ago on Black Friday, i was mugged. Not a &ldquo;Hey you, give me your wallet&rdquo; kind of mugging, but more of the &ldquo;We&#39;ll just smash your face and not ask&rdquo; kind. i woke up in the hospital without any memory of what happened (in fact, i lost several hours worth of memories). i went through two surgeries, and had my jaw wired shut for a couple of months, but it could have been a lot worse &ndash; especially for my family.</p>
+<p>It took a smash to the face to help me realize how much i have to be thankful for, and how much the things i do affect those around me. i certainly hope that it won&#39;t take something so drastic to do the same for you.</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[Theme Uploaded]]></title>
         <author><name>ikso</name></author>
         <link href="http://ikso.us/2013/2013-11-18-09-34.html"/>
