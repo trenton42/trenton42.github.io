@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New day, new attempt - Just a Blahg</title>
+    <title>Simple OS X XKCD client with Automator - Just a Blahg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/css/bootstrap.min.css?v=072e9" rel="stylesheet">
     <link href="/static/pygments.css?v=f1d2c" rel="stylesheet">
@@ -12,7 +12,7 @@
     
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Just a Blahg" />
     
-<link rel="canonical" href="/2013/2013-11-16-00-58.html" />
+<link rel="canonical" href="/2014/2014-05-20-09-03.html" />
 
 
   </head>
@@ -33,18 +33,23 @@
       </div>
       <div class="row">
         <div class="col-md-8 col-md-offset-1"><div class="hentry">
-    <h1 class="entry-title">New day, new attempt</h1>
+    <h1 class="entry-title">Simple OS X XKCD client with Automator</h1>
     <div class="entry-meta">
-        <time class="updated" datetime="2013-11-16T00:00:00+05:00" pubdate>
-            <a href="/2013/2013-11-16-00-58.html">2013-11-16</a>
+        <time class="updated" datetime="2014-05-20T00:00:00+05:00" pubdate>
+            <a href="/2014/2014-05-20-09-03.html">2014-05-20</a>
         </time>
         <span class="author vcard">
             by <span class="fn">ikso</span>
         </span>
     </div>
     <div class="entry-content">
-        <p>Just finished a little work with <a href="https://github.com/lepture/liquidluck">liquidluck</a>. i hadn&#39;t heard of it before, but <a href="http://zigg.com">zigg</a> mentioned it, so i thought i would give it a try. Honestly, i wasn&#39;t really sure about yet another static site generator, but so far i am impressed. Now if only i can keep writing things down.</p>
-<p>i will also hopefully get the template i made for it packaged up. i&#39;m not completely satisfied with it, but it will keep me going for the time being. But for now, it&#39;s time to sleep.</p>
+        <p>I am a big fan of the <a href="http://xkcd.com">xkcd</a> comics, and was toying with different ways to view the current comic directly. At one point, I built a complicated flow to put the current comic on my desktop using <a href="http://projects.tynsoe.org/en/geektool/">Geek Tool</a>, but I wanted something I could just open periodically. Finally, I decided to give Automator a try. Turns out, it&#39;s incredibly simple.</p>
+<p>Here is my final flow:</p>
+<p><img src="/static/img/20140520/automator.png" alt="Automator Final"/></p>
+<p>Simple enough! You can find those two actions under the Internet section in the Library:</p>
+<p><img src="/static/img/20140520/actions.png" alt="Actions"/></p>
+<p>Just drag the first action to the workspace, followed by the second action. Add the URL to the Get Specified URLs action (in this case I chose m.xkcd.com), and fiddle with the size options in the Website Popup action to get a size that works.</p>
+<p>Finally, save this work flow as an application, and you are all set!</p>
 
     </div>
 

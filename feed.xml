@@ -3,9 +3,27 @@
     <title>Just a Blahg</title>
     <link href="http://ikso.us/feed.xml" rel="self" />
     <link href="http://ikso.us/" />
-    <updated>2013-12-20T00:29:20+05:00</updated>
+    <updated>2014-05-20T09:44:45+05:00</updated>
     <id>http://ikso.us/</id>
     <entry>
+        <title type="html"><![CDATA[Simple OS X XKCD client with Automator]]></title>
+        <author><name>ikso</name></author>
+        <link href="http://ikso.us/2014/2014-05-20-09-03.html"/>
+        <published>2014-05-20T00:00:00+05:00</published>
+        <updated>2014-05-20T09:44:45+05:00</updated>
+        <id>http://ikso.us/2014/2014-05-20-09-03.html</id>
+        <category scheme="http://ikso.us/tag/boring-posts/" term="boring posts" label="boring posts" />
+        <content type="html" xml:base="http://ikso.us" xml:lang="en">
+            <![CDATA[ <p>I am a big fan of the <a href="http://xkcd.com">xkcd</a> comics, and was toying with different ways to view the current comic directly. At one point, I built a complicated flow to put the current comic on my desktop using <a href="http://projects.tynsoe.org/en/geektool/">Geek Tool</a>, but I wanted something I could just open periodically. Finally, I decided to give Automator a try. Turns out, it&#39;s incredibly simple.</p>
+<p>Here is my final flow:</p>
+<p><img src="/static/img/20140520/automator.png" alt="Automator Final"/></p>
+<p>Simple enough! You can find those two actions under the Internet section in the Library:</p>
+<p><img src="/static/img/20140520/actions.png" alt="Actions"/></p>
+<p>Just drag the first action to the workspace, followed by the second action. Add the URL to the Get Specified URLs action (in this case I chose m.xkcd.com), and fiddle with the size options in the Website Popup action to get a size that works.</p>
+<p>Finally, save this work flow as an application, and you are all set!</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[Attaching StringIO Data to a Mailgun Message]]></title>
         <author><name>ikso</name></author>
         <link href="http://ikso.us/2013/2013-12-19-22-48.html"/>
