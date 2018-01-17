@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.32.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>And now, Hugo! &middot; Trenton Broughton</title>
+
+  
+  <link rel="stylesheet" href="http://devd.io:8001/css/print.css" media="print">
+  <link rel="stylesheet" href="http://devd.io:8001/css/poole.css">
+  <link rel="stylesheet" href="http://devd.io:8001/css/syntax.css">
+  <link rel="stylesheet" href="http://devd.io:8001/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+</head>
+
+  <body class=" ">
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://devd.io:8001/"><h1>Trenton Broughton</h1></a>
+      <p class="lead">
+       danger: high entropy 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="http://devd.io:8001/">Home</a> </li>
+      <li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
+    </ul>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</div>
+
+    <div class="content container">
+    <div class="post">
+  <h1>And now, Hugo!</h1>
+  <span class="post-date">Fri, Jan 12, 2018</span>
+  
+  <a class="post-tag" href='/tags/code'>code</a>
+  <a class="post-tag" href='/tags/go'>go</a> <p>After forgetting about this for, hmm, three years, I figured it was time to start writing again. And of course, I can&rsquo;t just write. I also have to start over with everything. So this time around I am using <a href="https://gohugo.io/">Hugo</a> for my static site engine.</p>
+
+<p>I enjoy using Hugo as it has some nice tricks up its sleeve while being quite easy to get running.</p>
+
+<p>Recently, I have also been using <a href="https://code.visualstudio.com/">VSCode</a>, and to make it a little easier to generate posts I use the following <code>launch.json</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">See</span> <span style="color:#960050;background-color:#1e0010">https://go.microsoft.com/fwlink/?LinkId=733558</span>
+    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">documentation</span> <span style="color:#960050;background-color:#1e0010">about</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">tasks.json</span> <span style="color:#960050;background-color:#1e0010">format</span>
+    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;2.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;tasks&#34;</span>: [
+        {
+            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;New Content&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;shell&#34;</span>,
+            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;read -p &#39;set_color green; echo -n \&#34;Enter path for file \&#34;; set_color normal; echo \&#34;&gt; \&#34;&#39; pth; and hugo new \&#34;$pth\&#34; --editor code&#34;</span>,
+            <span style="color:#f92672">&#34;presentation&#34;</span>: {
+                <span style="color:#f92672">&#34;echo&#34;</span>: <span style="color:#66d9ef">true</span>,
+                <span style="color:#f92672">&#34;reveal&#34;</span>: <span style="color:#e6db74">&#34;always&#34;</span>,
+                <span style="color:#f92672">&#34;focus&#34;</span>: <span style="color:#66d9ef">true</span>,
+                <span style="color:#f92672">&#34;panel&#34;</span>: <span style="color:#e6db74">&#34;shared&#34;</span>
+            },
+            <span style="color:#f92672">&#34;problemMatcher&#34;</span>: []
+        }
+    ]
+}</code></pre></div>
+<p>This adds a launch task to create a new page, prompting for the name of the file.</p>
+
+<p>There is also the <a href="https://marketplace.visualstudio.com/items?itemName=akmittal.hugofy">Hugofy</a> extension for VSCode, however this is more than I need at this point.</p>
+
+</div>
+
+
+    </div>
+
+    
+  </body>
+</html>

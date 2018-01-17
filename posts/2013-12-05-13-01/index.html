@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.32.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>A Picture is worth how many words? Part 1 &middot; Trenton Broughton</title>
+
+  
+  <link rel="stylesheet" href="http://devd.io:8001/css/print.css" media="print">
+  <link rel="stylesheet" href="http://devd.io:8001/css/poole.css">
+  <link rel="stylesheet" href="http://devd.io:8001/css/syntax.css">
+  <link rel="stylesheet" href="http://devd.io:8001/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+</head>
+
+  <body class=" ">
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://devd.io:8001/"><h1>Trenton Broughton</h1></a>
+      <p class="lead">
+       danger: high entropy 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="http://devd.io:8001/">Home</a> </li>
+      <li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
+    </ul>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</div>
+
+    <div class="content container">
+    <div class="post">
+  <h1>A Picture is worth how many words? Part 1</h1>
+  <span class="post-date">Thu, Dec 5, 2013</span>
+  
+  <a class="post-tag" href='/tags/code'>code</a>
+  <a class="post-tag" href='/tags/python'>python</a> <p>i was playing around with some imaging code, and started wondering what it would look like to create some images out of text. i have worked with stenography in the past, but this time i didn&rsquo;t want to hide the text, i wanted to pack the image with it.</p>
+
+<p>First things first, i need some text. Time to turn to trusty <a href="http://www.gutenberg.org">Project Gutenberg</a>. i will be using the text of <a href="https://pypi.python.org/pypi/Pillow/2.2.1">Moby Dick</a> for this project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;~/Desktop/pg2701.txt&#39;</span>) <span style="color:#66d9ef">as</span> fp:
+    words <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>read()
+<span style="color:#66d9ef">print</span> len(words)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">1257274</span></code></pre></div>
+<p>Now i need a couple of functions to help me get started. First, it doesn&rsquo;t really matter what kind of dimensions my image has, but i would like it to be roughly square.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getDimensions</span>(data, size<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;&#39;&#39; Get a rough square based on the amount of data we have &#39;&#39;&#39;</span>
+    bits <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>ceil(len(data) <span style="color:#f92672">/</span> float(size))
+    w <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>floor(math<span style="color:#f92672">.</span>sqrt(bits))
+    h <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>ceil(bits <span style="color:#f92672">/</span> w)
+    <span style="color:#66d9ef">return</span> (int(w), int(h))</code></pre></div>
+<p>i am also going to define a generator that will turn my data into a stream of data that will be able to be understood by <a href="http://www.gutenberg.org/ebooks/2701">PIL</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">toPixelStream</span>(data, size<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;&#39;&#39; Takes a string and turns it into a sequence of pixel data &#39;&#39;&#39;</span>
+    start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> len(data):
+        b <span style="color:#f92672">=</span> data[start:start <span style="color:#f92672">+</span> size]
+        <span style="color:#66d9ef">if</span> len(b) <span style="color:#f92672">&lt;</span> size:
+            b <span style="color:#f92672">=</span> b <span style="color:#f92672">+</span> (<span style="color:#e6db74"></span><span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">*</span> (size <span style="color:#f92672">-</span> len(b)))
+        <span style="color:#66d9ef">yield</span> tuple([ord(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> b])
+        start <span style="color:#f92672">+=</span> size</code></pre></div>
+<p>Now i need to decide what image format to use. Here are some of my choices:</p>
+
+<ul>
+<li>PNG</li>
+<li>JPG</li>
+<li>GIF</li>
+<li>TIFF</li>
+</ul>
+
+<p>JPG is out right away because it is a lossy format. There is no guarantee that any data we put into is going to come back out (i will show you an example in my next post).</p>
+
+<p>GIF isn&rsquo;t real well suited either because it is an indexed format, and thus limits the number of colors we can use to represent our data. (But&hellip; there is a way&hellip;)</p>
+
+<p>That leaves PNG and TIFF. This time, i will use PNG.</p>
+
+<p>Remember that each pixel in a PNG has four components: Red, Green, Blue, and Alpha. Each of those is one byte, so we will be able to shove four characters into each pixel. Let&rsquo;s construct some image data!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">imgdata <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> toPixelStream(words)]
+<span style="color:#66d9ef">print</span> len(imgdata)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">314320</span>
+<span style="color:#66d9ef">print</span> imgdata[:<span style="color:#ae81ff">4</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> [(<span style="color:#ae81ff">239</span>, <span style="color:#ae81ff">187</span>, <span style="color:#ae81ff">191</span>, <span style="color:#ae81ff">84</span>), (<span style="color:#ae81ff">104</span>, <span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">80</span>), (<span style="color:#ae81ff">114</span>, <span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">106</span>, <span style="color:#ae81ff">101</span>), (<span style="color:#ae81ff">99</span>, <span style="color:#ae81ff">116</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">71</span>)]</code></pre></div>
+<p>Now we have a list of tuples. Each tuple represents a pixel: (R, G, B, A), and each component of that pixel is the ord of a character in our text. All we have left is to write that out to a file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+
+
+img <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>new(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;RGBA&#39;</span>, getDimensions(words)))
+img<span style="color:#f92672">.</span>putdata(imgdata)
+
+fp <span style="color:#f92672">=</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;~/Desktop/pg2701.png&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;w&#39;</span>)
+img<span style="color:#f92672">.</span>save(fp)
+fp<span style="color:#f92672">.</span>close()</code></pre></div>
+<p>To the Desktop!</p>
+
+<p><img src="/images/pg2701.png" alt="ing" /></p>
+
+<p>And there it is! The entire work of Moby Dick in an image!</p>
+
+<p>But wait, you say. How can we know that our data survived? Ok, let&rsquo;s try to pull our data back out of the image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fp <span style="color:#f92672">=</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;~/Desktop/pg2701.png&#39;</span>)
+im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(fp)
+newdata <span style="color:#f92672">=</span> im<span style="color:#f92672">.</span>getdata()
+book <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> pixel <span style="color:#f92672">in</span> newdata:
+	<span style="color:#66d9ef">for</span> component <span style="color:#f92672">in</span> pixel:
+		book<span style="color:#f92672">.</span>append(chr(component))
+book <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(book)
+<span style="color:#66d9ef">print</span> book[:<span style="color:#ae81ff">181</span>]
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;The Project Gutenberg EBook of Moby Dick; or The Whale, by Herman Melville
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">This eBook is for the use of anyone anywhere at no cost and with
+</span><span style="color:#e6db74">almost no restrictions whatsoever.&#34;&#34;&#34;</span></code></pre></div>
+<p>It worked!</p>
+
+</div>
+
+
+    </div>
+
+    
+  </body>
+</html>

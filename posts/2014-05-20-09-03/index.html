@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>404 Page not found &middot; Trenton Broughton</title>
+  <title>Simple OS X XKCD client with Automator &middot; Trenton Broughton</title>
 
   
   <link rel="stylesheet" href="http://devd.io:8001/css/print.css" media="print">
@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="http://devd.io:8001/index.xml" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
 </head>
 
   <body class=" ">
@@ -45,8 +45,27 @@
 </div>
 
     <div class="content container">
-    <h1>404: Page not found</h1>
-<p class="lead">That's not here... <a href="http://devd.io:8001/">Return to base.</a></p>
+    <div class="post">
+  <h1>Simple OS X XKCD client with Automator</h1>
+  <span class="post-date">Tue, May 20, 2014</span>
+  
+  <a class="post-tag" href='/tags/boring%20posts'>boring posts</a> <p>I am a big fan of the <a href="http://xkcd.com">xkcd</a> comics, and was toying with different ways to view the current comic directly. At one point, I built a complicated flow to put the current comic on my desktop using <a href="http://projects.tynsoe.org/en/geektool/">Geek Tool</a>, but I wanted something I could just open periodically. Finally, I decided to give Automator a try. Turns out, it&rsquo;s incredibly simple.</p>
+
+<p>Here is my final flow:</p>
+
+<p><img src="/images/20140520/automator.png" alt="Automator Final" /></p>
+
+<p>Simple enough! You can find those two actions under the Internet section in the Library:</p>
+
+<p><img src="/images/20140520/actions.png" alt="Actions" /></p>
+
+<p>Just drag the first action to the workspace, followed by the second action. Add the URL to the Get Specified URLs action (in this case I chose m.xkcd.com), and fiddle with the size options in the Website Popup action to get a size that works.</p>
+
+<p>Finally, save this work flow as an application, and you are all set!</p>
+
+</div>
+
+
     </div>
 
     
