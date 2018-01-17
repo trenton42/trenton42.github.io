@@ -1,0 +1,7 @@
+baseURL: "http://devd.io:8001/"
+languageCode: "en-us"
+title: "Trenton Broughton"
+theme: "hyde"
+PygmentsCodeFences: true
+params:
+  description: "danger: high entropy"
