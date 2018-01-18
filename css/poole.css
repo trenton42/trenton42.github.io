@@ -336,29 +336,26 @@ tbody tr:nth-child(odd) th {
 /* post boxes */
 
 .post-boxes {
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 16px;
-  margin: 0 -5px;
-  justify-content: space-between;
+
 }
 
-.post-box {
-  flex-grow: 1;
-  width: 30%;
-  margin: 0 5px;
-  min-width: 210px;
+.post-box>div {
+  margin-bottom: .75em;
+}
+
+.post-box>div a {
+  font-size: .75em;
 }
 
 .post-box .post-title {
   font-size: 1.1em;
   font-weight: normal;
-  min-height: 2em;
+  margin: 0;
 }
 
 .post-box .post-date {
-  margin-top: .25em;
-  margin-bottom: .25em;
+  margin: 0;
+  font-size: .75em;
 }
 
 /* Related posts */
