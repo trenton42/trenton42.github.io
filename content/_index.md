@@ -1,5 +1,5 @@
 ---
-title: Blahg and things
+title: Blahg and other things
 draft: false
 date: 2018-01-12T21:47:04-05:00
 ---
