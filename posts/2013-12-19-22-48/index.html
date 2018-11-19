@@ -4,7 +4,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="generator" content="Hugo 0.32.4" />
+  <meta name="generator" content="Hugo 0.51" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -70,7 +70,7 @@
 
 <p>If you are using <a href="http://docs.python-requests.org/en/latest/" title="Python Requests library">requests</a> (or <a href="https://github.com/dreid/treq/" title="Python Twisted Requests">treq</a>) to send the messages through their REST API, however, you may have noticed that you must specify &ldquo;attachment&rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&rsquo;t work. Added a <code>name</code> attribute to the StringIO class does the trick:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NamedStringIO</span>(StringIO):
-    name <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;&#39;</span>
+    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 
     <span style="color:#66d9ef">def</span> __init__(self, data, name<span style="color:#f92672">=</span>None):
         <span style="color:#66d9ef">if</span> name:
@@ -79,22 +79,22 @@
 <p>Now using their <a href="http://documentation.mailgun.com/quickstart.html#sending-messages" title="Mailgun example: sending a message">example</a> will work:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> paste.util <span style="color:#f92672">import</span> MultiDict
 
-good <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;This is some good data&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;good.txt&#34;</span>)
-more <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;This is some more good data&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;more.txt&#34;</span>)
+good <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db74">&#34;This is some good data&#34;</span>, <span style="color:#e6db74">&#34;good.txt&#34;</span>)
+more <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db74">&#34;This is some more good data&#34;</span>, <span style="color:#e6db74">&#34;more.txt&#34;</span>)
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_complex_message</span>():
     <span style="color:#66d9ef">return</span> requests<span style="color:#f92672">.</span>post(
-        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;https://api.mailgun.net/v2/samples.mailgun.org/messages&#34;</span>,
-        auth<span style="color:#f92672">=</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;api&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;key-PUT_YER_KEY_HERE&#34;</span>),
-        files<span style="color:#f92672">=</span>MultiDict([(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;attachment&#34;</span>, good),
-                         (<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;attachment&#34;</span>, more)]),
-        data<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;from&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Excited User &lt;me@samples.mailgun.org&gt;&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;to&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;foo@example.com&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;cc&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;baz@example.com&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;bcc&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;bar@example.com&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;subject&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Hello&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Testing some Mailgun awesomness!&#34;</span>,
-              <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;html&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&lt;html&gt;HTML version of the body&lt;/html&gt;&#34;</span>})</code></pre></div>
+        <span style="color:#e6db74">&#34;https://api.mailgun.net/v2/samples.mailgun.org/messages&#34;</span>,
+        auth<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;api&#34;</span>, <span style="color:#e6db74">&#34;key-PUT_YER_KEY_HERE&#34;</span>),
+        files<span style="color:#f92672">=</span>MultiDict([(<span style="color:#e6db74">&#34;attachment&#34;</span>, good),
+                         (<span style="color:#e6db74">&#34;attachment&#34;</span>, more)]),
+        data<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;from&#34;</span>: <span style="color:#e6db74">&#34;Excited User &lt;me@samples.mailgun.org&gt;&#34;</span>,
+              <span style="color:#e6db74">&#34;to&#34;</span>: <span style="color:#e6db74">&#34;foo@example.com&#34;</span>,
+              <span style="color:#e6db74">&#34;cc&#34;</span>: <span style="color:#e6db74">&#34;baz@example.com&#34;</span>,
+              <span style="color:#e6db74">&#34;bcc&#34;</span>: <span style="color:#e6db74">&#34;bar@example.com&#34;</span>,
+              <span style="color:#e6db74">&#34;subject&#34;</span>: <span style="color:#e6db74">&#34;Hello&#34;</span>,
+              <span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Testing some Mailgun awesomness!&#34;</span>,
+              <span style="color:#e6db74">&#34;html&#34;</span>: <span style="color:#e6db74">&#34;&lt;html&gt;HTML version of the body&lt;/html&gt;&#34;</span>})</code></pre></div>
 </div>
 
 
