@@ -40,7 +40,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-
+  {{ if isset .Params "scripts" }}
+  {{ range .Params.scripts }}
+  <script src="{{ . }}"></script>
+  {{ end }}
+  {{ end -}}
   <!-- RSS -->
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 </head>
