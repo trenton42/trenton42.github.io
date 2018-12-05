@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blahg Posts on Trenton Broughton</title>
-    <link>http://devd.io:8000/posts/</link>
+    <link>https://ikso.us/posts/</link>
     <description>Recent content in Blahg Posts on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jan 2018 23:08:11 -0500</lastBuildDate>
     
-	<atom:link href="http://devd.io:8000/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ikso.us/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>And now, Hugo!</title>
-      <link>http://devd.io:8000/posts/hugo/</link>
+      <link>https://ikso.us/posts/hugo/</link>
       <pubDate>Fri, 12 Jan 2018 21:41:07 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/hugo/</guid>
+      <guid>https://ikso.us/posts/hugo/</guid>
       <description>After forgetting about this for, hmm, three years, I figured it was time to start writing again. And of course, I can&amp;rsquo;t just write. I also have to start over with everything. So this time around I am using Hugo for my static site engine.
 I enjoy using Hugo as it has some nice tricks up its sleeve while being quite easy to get running.
 Recently, I have also been using VSCode, and to make it a little easier to generate posts I use the following launch.</description>
@@ -24,10 +24,10 @@ Recently, I have also been using VSCode, and to make it a little easier to gener
     
     <item>
       <title>Simple OS X XKCD client with Automator</title>
-      <link>http://devd.io:8000/posts/2014-05-20-09-03/</link>
+      <link>https://ikso.us/posts/2014-05-20-09-03/</link>
       <pubDate>Tue, 20 May 2014 09:03:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2014-05-20-09-03/</guid>
+      <guid>https://ikso.us/posts/2014-05-20-09-03/</guid>
       <description>I am a big fan of the xkcd comics, and was toying with different ways to view the current comic directly. At one point, I built a complicated flow to put the current comic on my desktop using Geek Tool, but I wanted something I could just open periodically. Finally, I decided to give Automator a try. Turns out, it&amp;rsquo;s incredibly simple.
 Here is my final flow:
 Simple enough! You can find those two actions under the Internet section in the Library:</description>
@@ -35,30 +35,30 @@ Simple enough! You can find those two actions under the Internet section in the 
     
     <item>
       <title>Attaching StringIO Data to a Mailgun Message</title>
-      <link>http://devd.io:8000/posts/2013-12-19-22-48/</link>
+      <link>https://ikso.us/posts/2013-12-19-22-48/</link>
       <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-12-19-22-48/</guid>
+      <guid>https://ikso.us/posts/2013-12-19-22-48/</guid>
       <description>Recently i started using Mailgun for our outgoing messages. They have a very nice API, and take a lot of the heavy lifting out of creating multipart messages.
 If you are using requests (or treq) to send the messages through their REST API, however, you may have noticed that you must specify &amp;ldquo;attachment&amp;rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&amp;rsquo;t work.</description>
     </item>
     
     <item>
       <title>A Picture is worth how many words? Part 1</title>
-      <link>http://devd.io:8000/posts/2013-12-05-13-01/</link>
+      <link>https://ikso.us/posts/2013-12-05-13-01/</link>
       <pubDate>Thu, 05 Dec 2013 13:01:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-12-05-13-01/</guid>
+      <guid>https://ikso.us/posts/2013-12-05-13-01/</guid>
       <description>i was playing around with some imaging code, and started wondering what it would look like to create some images out of text. i have worked with stenography in the past, but this time i didn&amp;rsquo;t want to hide the text, i wanted to pack the image with it.
 First things first, i need some text. Time to turn to trusty Project Gutenberg. i will be using the text of Moby Dick for this project.</description>
     </item>
     
     <item>
       <title>Handy Sale Advertisement Guide.</title>
-      <link>http://devd.io:8000/posts/2013-12-02-12-47/</link>
+      <link>https://ikso.us/posts/2013-12-02-12-47/</link>
       <pubDate>Mon, 02 Dec 2013 12:47:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-12-02-12-47/</guid>
+      <guid>https://ikso.us/posts/2013-12-02-12-47/</guid>
       <description>In this holiday season (and pretty much any other time, now) it is nearly impossible to avoid the bombardment of advertisements. Maybe i&amp;rsquo;ve been growing cynical, but i have become a lot more antagonistic toward companies that advertise in ways i don&amp;rsquo;t like. So here is the handy guide i use to interpret ads.
  Sign says: &amp;ldquo;Deals starting at just $20!&amp;rdquo;
 i read: &amp;ldquo;Absolutely nothing under $20&amp;rdquo;
@@ -67,19 +67,19 @@ i read: &amp;ldquo;Absolutely nothing under $20&amp;rdquo;
     
     <item>
       <title>Black Friday.</title>
-      <link>http://devd.io:8000/posts/2013-11-29-15-12/</link>
+      <link>https://ikso.us/posts/2013-11-29-15-12/</link>
       <pubDate>Fri, 29 Nov 2013 15:12:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-11-29-15-12/</guid>
+      <guid>https://ikso.us/posts/2013-11-29-15-12/</guid>
       <description>Black Friday means something quite different to me. See, three years ago on Black Friday, i was mugged. Not a &amp;ldquo;Hey you, give me your wallet&amp;rdquo; kind of mugging, but more of the &amp;ldquo;We&amp;rsquo;ll just smash your face and not ask&amp;rdquo; kind. i woke up in the hospital without any memory of what happened (in fact, i lost several hours worth of memories). i went through two surgeries, and had my jaw wired shut for a couple of months, but it could have been a lot worse &amp;ndash; especially for my family.</description>
     </item>
     
     <item>
       <title>Theme Uploaded</title>
-      <link>http://devd.io:8000/posts/2013-11-18-09-34/</link>
+      <link>https://ikso.us/posts/2013-11-18-09-34/</link>
       <pubDate>Mon, 18 Nov 2013 09:34:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-11-18-09-34/</guid>
+      <guid>https://ikso.us/posts/2013-11-18-09-34/</guid>
       <description>I whipped up this theme for liquidluck recently. It is based on Bootstrap 3, and doesn&amp;rsquo;t contain many bells or whistles (as you can see).
 Clone it here https://github.com/trenton42/liquidluck-theme-bootstrap3
 i will (hopefully) be working on some improvements in the future.</description>
@@ -87,10 +87,10 @@ i will (hopefully) be working on some improvements in the future.</description>
     
     <item>
       <title>New day, new attempt</title>
-      <link>http://devd.io:8000/posts/2013-11-16-00-58/</link>
+      <link>https://ikso.us/posts/2013-11-16-00-58/</link>
       <pubDate>Sat, 16 Nov 2013 00:16:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/posts/2013-11-16-00-58/</guid>
+      <guid>https://ikso.us/posts/2013-11-16-00-58/</guid>
       <description>Just finished a little work with liquidluck. i hadn&amp;rsquo;t heard of it before, but zigg mentioned it, so i thought i would give it a try. Honestly, i wasn&amp;rsquo;t really sure about yet another static site generator, but so far i am impressed. Now if only i can keep writing things down.
 i will also hopefully get the template i made for it packaged up. i&amp;rsquo;m not completely satisfied with it, but it will keep me going for the time being.</description>
     </item>

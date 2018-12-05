@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Trenton Broughton</title>
-    <link>http://devd.io:8000/tags/</link>
+    <link>https://ikso.us/tags/</link>
     <description>Recent content in Tags on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 May 2014 09:03:00 -0500</lastBuildDate>
     
-	<atom:link href="http://devd.io:8000/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ikso.us/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Boring Posts</title>
-      <link>http://devd.io:8000/tags/boring-posts/</link>
+      <link>https://ikso.us/tags/boring-posts/</link>
       <pubDate>Tue, 20 May 2014 09:03:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/tags/boring-posts/</guid>
+      <guid>https://ikso.us/tags/boring-posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>http://devd.io:8000/tags/code/</link>
+      <link>https://ikso.us/tags/code/</link>
       <pubDate>Fri, 12 Jan 2018 21:41:07 -0500</pubDate>
       
-      <guid>http://devd.io:8000/tags/code/</guid>
+      <guid>https://ikso.us/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>http://devd.io:8000/tags/go/</link>
+      <link>https://ikso.us/tags/go/</link>
       <pubDate>Fri, 12 Jan 2018 21:41:07 -0500</pubDate>
       
-      <guid>http://devd.io:8000/tags/go/</guid>
+      <guid>https://ikso.us/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>http://devd.io:8000/tags/life/</link>
+      <link>https://ikso.us/tags/life/</link>
       <pubDate>Mon, 02 Dec 2013 12:47:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/tags/life/</guid>
+      <guid>https://ikso.us/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://devd.io:8000/tags/python/</link>
+      <link>https://ikso.us/tags/python/</link>
       <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
       
-      <guid>http://devd.io:8000/tags/python/</guid>
+      <guid>https://ikso.us/tags/python/</guid>
       <description></description>
     </item>
     
