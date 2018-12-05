@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Boring Posts on Trenton Broughton</title>
-    <link>https://ikso.us/tags/boring-posts/</link>
+    <link>http://devd.io:8000/tags/boring-posts/</link>
     <description>Recent content in Boring Posts on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 May 2014 09:03:00 -0500</lastBuildDate>
     
-	<atom:link href="https://ikso.us/tags/boring-posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://devd.io:8000/tags/boring-posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Simple OS X XKCD client with Automator</title>
-      <link>https://ikso.us/posts/2014-05-20-09-03/</link>
+      <link>http://devd.io:8000/posts/2014-05-20-09-03/</link>
       <pubDate>Tue, 20 May 2014 09:03:00 -0500</pubDate>
       
-      <guid>https://ikso.us/posts/2014-05-20-09-03/</guid>
+      <guid>http://devd.io:8000/posts/2014-05-20-09-03/</guid>
       <description>I am a big fan of the xkcd comics, and was toying with different ways to view the current comic directly. At one point, I built a complicated flow to put the current comic on my desktop using Geek Tool, but I wanted something I could just open periodically. Finally, I decided to give Automator a try. Turns out, it&amp;rsquo;s incredibly simple.
 Here is my final flow:
 Simple enough! You can find those two actions under the Internet section in the Library:</description>
@@ -24,10 +24,10 @@ Simple enough! You can find those two actions under the Internet section in the 
     
     <item>
       <title>Handy Sale Advertisement Guide.</title>
-      <link>https://ikso.us/posts/2013-12-02-12-47/</link>
+      <link>http://devd.io:8000/posts/2013-12-02-12-47/</link>
       <pubDate>Mon, 02 Dec 2013 12:47:00 -0500</pubDate>
       
-      <guid>https://ikso.us/posts/2013-12-02-12-47/</guid>
+      <guid>http://devd.io:8000/posts/2013-12-02-12-47/</guid>
       <description>In this holiday season (and pretty much any other time, now) it is nearly impossible to avoid the bombardment of advertisements. Maybe i&amp;rsquo;ve been growing cynical, but i have become a lot more antagonistic toward companies that advertise in ways i don&amp;rsquo;t like. So here is the handy guide i use to interpret ads.
  Sign says: &amp;ldquo;Deals starting at just $20!&amp;rdquo;
 i read: &amp;ldquo;Absolutely nothing under $20&amp;rdquo;
@@ -36,10 +36,10 @@ i read: &amp;ldquo;Absolutely nothing under $20&amp;rdquo;
     
     <item>
       <title>New day, new attempt</title>
-      <link>https://ikso.us/posts/2013-11-16-00-58/</link>
+      <link>http://devd.io:8000/posts/2013-11-16-00-58/</link>
       <pubDate>Sat, 16 Nov 2013 00:16:00 -0500</pubDate>
       
-      <guid>https://ikso.us/posts/2013-11-16-00-58/</guid>
+      <guid>http://devd.io:8000/posts/2013-11-16-00-58/</guid>
       <description>Just finished a little work with liquidluck. i hadn&amp;rsquo;t heard of it before, but zigg mentioned it, so i thought i would give it a try. Honestly, i wasn&amp;rsquo;t really sure about yet another static site generator, but so far i am impressed. Now if only i can keep writing things down.
 i will also hopefully get the template i made for it packaged up. i&amp;rsquo;m not completely satisfied with it, but it will keep me going for the time being.</description>
     </item>

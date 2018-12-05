@@ -383,6 +383,25 @@ tbody tr:nth-child(odd) th {
   color: inherit;
 }
 
+ul.posts {
+  padding-left: 0;
+}
+
+.posts li {
+  list-style: none;
+  border-left: 3px solid transparent;
+  padding-left: 5px;
+  border-bottom: 1px dotted #ddd;
+}
+
+.posts li:hover {
+  border-left: 3px solid #ddd;
+}
+
+.posts time {
+  font-size: .7em;
+}
+
 
 /*
  * Pagination
