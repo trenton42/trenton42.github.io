@@ -1,6 +1,7 @@
 ---
 title: The World
 date: 2018-12-01T20:40:36-0500
+draft: true
 scripts:
     - https://code.createjs.com/1.0.0/createjs.min.js
 ---
