@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /site-dev-notes/
+Disallow: 404.html
+
+Disallow: /404/
+Disallow: /search/
+
+Sitemap: https://esolia.com/sitemap.xml
+Sitemap: https://esolia.com/geo-sitemap.xml
+
