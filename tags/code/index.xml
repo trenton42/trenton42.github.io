@@ -6,10 +6,20 @@
     <description>Recent content in Code on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jan 2018 21:41:07 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 05 Dec 2018 21:44:57 -0500</lastBuildDate>
     
 	<atom:link href="https://ikso.us/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Migrating From Blogger</title>
+      <link>https://ikso.us/posts/migrating-from-blogger/</link>
+      <pubDate>Wed, 05 Dec 2018 21:44:57 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/migrating-from-blogger/</guid>
+      <description>Yesterday, I suddenly remembered that I had written several posts on Blogger and forgotten all about them. I decided to migrate the content over to Hugo and take advantage of Google&amp;rsquo;s Takeout program.
+I wasn&amp;rsquo;t really sure what I would get when exporting a blog, but I was not thrilled when I downloaded my content. Instead of a directory of HTML files, I received a single ATOM feed of all of my posts.</description>
+    </item>
     
     <item>
       <title>And now, Hugo!</title>
