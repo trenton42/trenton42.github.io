@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta name="generator" content="Hugo 0.52" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Migrating From Blogger &middot; Trenton Broughton</title>
+
+  
+  <link rel="stylesheet" href="https://ikso.us/css/print.css" media="print">
+  <link rel="stylesheet" href="https://ikso.us/css/poole.css">
+  <link rel="stylesheet" href="https://ikso.us/css/syntax.css">
+  <link rel="stylesheet" href="https://ikso.us/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+</head>
+
+  <body class=" ">
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://ikso.us/"><h1>Trenton Broughton</h1></a>
+      <p class="lead">
+       danger: high entropy 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="https://ikso.us/">Home</a> </li>
+      <li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
+    </ul>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</div>
+
+    <div class="content container">
+    <div class="post">
+  <h1>Migrating From Blogger</h1>
+  <span class="post-date">Wed, Dec 5, 2018</span>
+   <p>Yesterday, I suddenly remembered that I had written several posts on Blogger and forgotten all about them. I decided to migrate the content over to Hugo and take advantage of Google&rsquo;s <a href="https://takeout.google.com/">Takeout</a> program.</p>
+
+<p>I wasn&rsquo;t really sure what I would get when exporting a blog, but I was not thrilled when I downloaded my content. Instead of a directory of HTML files, I received a single ATOM feed of all of my posts. After considering a couple of different ways I could slice up the data, I decided on a simple bash script and a tool called <a href="http://xmlstar.sourceforge.net/overview.php">XMLStarlet</a> (available in homebrew on MacOS).</p>
+
+<p>Here is the script I used to convert the entries:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Load the entire feed into a variable</span>
+DATA<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat feed.atom<span style="color:#66d9ef">)</span>
+<span style="color:#75715e"># Figure out how many entries we have</span>
+COUNT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>xml sel -t -v <span style="color:#e6db74">&#39;count(feed/entry)&#39;</span> feed.atom<span style="color:#66d9ef">)</span>
+
+<span style="color:#75715e"># Loop through all of the entires one by one, creating a file for each</span>
+<span style="color:#75715e"># entry</span>
+<span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">`</span>seq <span style="color:#ae81ff">1</span> $COUNT<span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
+    <span style="color:#75715e"># Parse the file name. Blogger uses a format like</span> 
+    <span style="color:#75715e"># /2013/03/my-super-post.html, but I only care about the filename,</span>
+    <span style="color:#75715e"># not the rest of the path. I also want my file to end in .md.</span>
+    <span style="color:#75715e"># The sed replacement at the end turns /2013/03/my-super-post.html</span>
+    <span style="color:#75715e"># into my-super-post.md</span>
+    FILENAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo $DATA | xml sel -t -m <span style="color:#e6db74">&#34;feed/entry[</span>$i<span style="color:#e6db74">]&#34;</span> -v <span style="color:#e6db74">&#34;blogger:filename&#34;</span> | sed <span style="color:#e6db74">&#34;s|.*/||; s/\.html</span>$<span style="color:#e6db74">/.md/&#34;</span><span style="color:#66d9ef">)</span>
+    <span style="color:#75715e"># Blogger also puts comments into the feed as entries (?!).</span>
+    <span style="color:#75715e"># Let&#39;s just skip those.</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -z <span style="color:#e6db74">&#34;</span>$FILENAME<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">continue</span>; <span style="color:#66d9ef">fi</span>
+    <span style="color:#75715e"># This grabs an entry and builds the front-matter. Note that</span>
+    <span style="color:#75715e"># certain things in the title will cause the yaml to fail to</span>
+    <span style="color:#75715e"># parse, so we must wrap it in quotes. Hopefully you didn&#39;t have</span>
+    <span style="color:#75715e"># quotes in your title (but it&#39;s not a big deal to fix if you do).</span>
+    <span style="color:#75715e"># This also saves the front matter in a file in the current</span>
+    <span style="color:#75715e"># directory.</span>
+    echo $DATA | xml sel -t -m <span style="color:#e6db74">&#34;feed/entry[</span>$i<span style="color:#e6db74">]&#34;</span> -o <span style="color:#e6db74">&#34;---&#34;</span> -n -o <span style="color:#e6db74">&#39;title: &#34;&#39;</span> -v title -o <span style="color:#e6db74">&#39;&#34;&#39;</span> -n -o <span style="color:#e6db74">&#34;date: &#34;</span> -v published -n -o <span style="color:#e6db74">&#34;draft: false&#34;</span> -n -o <span style="color:#e6db74">&#39;---&#39;</span> -n -n &gt; $FILENAME
+    <span style="color:#75715e"># Now we must take the content and un-html escape it. Fortunately,</span>
+    <span style="color:#75715e"># xmlstarlet has an easy way to do that.</span>
+    echo $DATA | xml sel -t -m <span style="color:#e6db74">&#34;feed/entry[</span>$i<span style="color:#e6db74">]&#34;</span> -v content | xml unesc &gt;&gt; $FILENAME
+    <span style="color:#75715e"># tada!</span>
+<span style="color:#66d9ef">done</span></code></pre></div>
+<p>Now there is just some light dusting to be done in the content (depending on how much markup was in each blog post). Also, don&rsquo;t forget that images will be hotlinked to Blogger, and those will probably not work if the blog is ever deleted. I went through and made sure that I had downloaded any images I used in my posts.</p>
+
+</div>
+
+
+    </div>
+
+    
+  </body>
+</html>

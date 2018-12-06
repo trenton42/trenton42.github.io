@@ -1,9 +1,0 @@
-Sitemap: https://pypi.org/sitemap.xml
-
-User-agent: *
-Disallow: /simple/
-Disallow: /packages/
-Disallow: /_includes/
-Disallow: /pypi/*/json
-Disallow: /pypi/*/*/json
-Disallow: /pypi*?
