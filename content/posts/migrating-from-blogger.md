@@ -2,6 +2,9 @@
 title: "Migrating From Blogger"
 date: 2018-12-05T21:44:57-05:00
 draft: false
+tags:
+    - code
+description: Migrating posts from Blogger to Hugo (or something else) turned out to not be as horrible as I first thought.
 ---
 
 Yesterday, I suddenly remembered that I had written several posts on Blogger and forgotten all about them. I decided to migrate the content over to Hugo and take advantage of Google's [Takeout][0] program.
