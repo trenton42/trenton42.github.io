@@ -4,6 +4,7 @@ date: 2018-12-15T09:07:10-05:00
 draft: false
 tags:
     - kubernetes
+description: Keeping Kubernetes up to date can be a challenge, but the alternative can have severe consequences.
 ---
 
 The recent Kubernetes vulnerability [CVE-2018-1002105](https://github.com/kubernetes/kubernetes/issues/71411) should be a wake up call to any organization that is running Kubernetes, but does not have a regular update strategy in place. I won't go into detail about the vulnerability as that is well documented in many places, but what I want to focus on is the challenge of keeping your cluster up to date.
