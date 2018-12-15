@@ -12,19 +12,19 @@ var chardata = {
     animations: {
         mu: {
             frames: [0, 1, 2],
-            speed: 0.25
+            speed: 0.45
         },
         mr: {
             frames: [3, 4, 5],
-            speed: 0.25
+            speed: 0.45
         },
         md: {
             frames: [6, 7, 8],
-            speed: 0.25
+            speed: 0.45
         },
         ml: {
             frames: [9, 10, 11],
-            speed: 0.25
+            speed: 0.45
         },
         u: 1,
         r: 4,
