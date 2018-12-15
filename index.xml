@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Why You Need a Kubernetes Upgrade Path</title>
+      <link>https://ikso.us/posts/why-you-need-an-upgrade-path/</link>
+      <pubDate>Sat, 15 Dec 2018 09:07:10 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/why-you-need-an-upgrade-path/</guid>
+      <description>The recent Kubernetes vulnerability CVE-2018-1002105 should be a wake up call to any organization that is running Kubernetes, but does not have a regular update strategy in place. I won&amp;rsquo;t go into detail about the vulnerability as that is well documented in many places, but what I want to focus on is the challenge of keeping your cluster up to date.
+Keeping up with Kubernetes releases can certainly be challenging as it is a fairly fast moving project, and it is also somewhat complex to deploy especially on bare metal.</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
       <link>https://ikso.us/posts/about/</link>
       <pubDate>Sun, 09 Dec 2018 21:39:55 -0500</pubDate>

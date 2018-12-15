@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ikso.us/posts/why-you-need-an-upgrade-path/</loc>
+    <lastmod>2018-12-15T09:07:10-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikso.us/posts/about/</loc>
     <lastmod>2018-12-09T21:39:55-05:00</lastmod>
   </url>
@@ -142,6 +147,12 @@
   <url>
     <loc>https://ikso.us/tags/go/</loc>
     <lastmod>2018-01-12T21:41:07-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ikso.us/tags/kubernetes/</loc>
+    <lastmod>2018-12-15T09:07:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   

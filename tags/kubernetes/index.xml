@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Trenton Broughton</title>
+    <link>https://ikso.us/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Trenton Broughton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Dec 2018 09:07:10 -0500</lastBuildDate>
+    
+	<atom:link href="https://ikso.us/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why You Need a Kubernetes Upgrade Path</title>
+      <link>https://ikso.us/posts/why-you-need-an-upgrade-path/</link>
+      <pubDate>Sat, 15 Dec 2018 09:07:10 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/why-you-need-an-upgrade-path/</guid>
+      <description>The recent Kubernetes vulnerability CVE-2018-1002105 should be a wake up call to any organization that is running Kubernetes, but does not have a regular update strategy in place. I won&amp;rsquo;t go into detail about the vulnerability as that is well documented in many places, but what I want to focus on is the challenge of keeping your cluster up to date.
+Keeping up with Kubernetes releases can certainly be challenging as it is a fairly fast moving project, and it is also somewhat complex to deploy especially on bare metal.</description>
+    </item>
+    
+  </channel>
+</rss>

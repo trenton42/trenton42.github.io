@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Tags &middot; Trenton Broughton</title>
+  <title>Why You Need a Kubernetes Upgrade Path &middot; Trenton Broughton</title>
 
   
   <link rel="stylesheet" href="https://ikso.us/css/print.css" media="print">
@@ -38,7 +38,7 @@
   <meta name="theme-color" content="#ffffff">
   <script src="https://ikso.us/js/side.js"></script>
   
-  <link href="https://ikso.us/tags/index.xml" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
 </head>
 
   <body class=" ">
@@ -62,58 +62,19 @@
 </div>
 
     <div class="content container">
-    <h2>Tags</h2>
-<ul class="posts">
-  <li>
-    <span>
-      <time class="post-list">2014-05-20</time>
-      <a href="https://ikso.us/tags/boring-posts/">Boring Posts</a>
-      <p>
-        
-      </p>
-    </span>
-  </li><li>
-    <span>
-      <time class="post-list">2018-12-05</time>
-      <a href="https://ikso.us/tags/code/">Code</a>
-      <p>
-        
-      </p>
-    </span>
-  </li><li>
-    <span>
-      <time class="post-list">2018-01-12</time>
-      <a href="https://ikso.us/tags/go/">Go</a>
-      <p>
-        
-      </p>
-    </span>
-  </li><li>
-    <span>
-      <time class="post-list">2018-12-15</time>
-      <a href="https://ikso.us/tags/kubernetes/">Kubernetes</a>
-      <p>
-        
-      </p>
-    </span>
-  </li><li>
-    <span>
-      <time class="post-list">2013-12-02</time>
-      <a href="https://ikso.us/tags/life/">Life</a>
-      <p>
-        
-      </p>
-    </span>
-  </li><li>
-    <span>
-      <time class="post-list">2013-12-19</time>
-      <a href="https://ikso.us/tags/python/">Python</a>
-      <p>
-        
-      </p>
-    </span>
-  </li>
-</ul>
+    <div class="post">
+  <h1>Why You Need a Kubernetes Upgrade Path</h1>
+  <span class="post-date">Sat, Dec 15, 2018</span>
+  
+  <a class="post-tag" href='/tags/kubernetes'>kubernetes</a> <p>The recent Kubernetes vulnerability <a href="https://github.com/kubernetes/kubernetes/issues/71411">CVE-2018-1002105</a> should be a wake up call to any organization that is running Kubernetes, but does not have a regular update strategy in place. I won&rsquo;t go into detail about the vulnerability as that is well documented in many places, but what I want to focus on is the challenge of keeping your cluster up to date.</p>
+
+<p>Keeping up with Kubernetes releases can certainly be challenging as it is a fairly fast moving project, and it is also somewhat complex to deploy especially on bare metal. It is critical, however, to treat your Kubernetes infrastructure in nearly the same way as you do your own code that you are deploying regularly. The problem with falling too far behind with a project like Kubernetes is that the farther behind you get, the more difficult it becomes to upgrade once a critical vulnerability is found. Depending on what version you are running, you may not be able to simply upgrade to a patched version without stepping through intermediate versions, and your tooling may need to be updated to work with the newer version.</p>
+
+<p>The best way to avoid getting into this situation (i.e. falling far behind &ndash; do not neglect taking other measures to secure your cluster) is to have an upgrade plan and process in place when installing a new cluster, or get that process going now if you are already running a cluster. Automate what you can, if only to receive notifications on new releases, and understand how cluster upgrades affect your cluster workload (you may find that many times a cluster upgrade will only affect the control plane, and will not disrupt any running pods). This rhythm can reduce the stress of dealing with updates, and greatly reduce the length of time your cluster may be exposed to vulnerabilities.</p>
+
+</div>
+
+
     </div>
 
     
