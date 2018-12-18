@@ -6,5 +6,10 @@
     </div>
 
     {{ template "_internal/google_analytics_async.html" . }}
+    {{ if .Site.Params.MixpanelID }}
+    <script>
+      mixpanel.track("Page View", {page: "{{ .Page.RelPermalink }}"});
+    </script>
+    {{ end }}
   </body>
 </html>
