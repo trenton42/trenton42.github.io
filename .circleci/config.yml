@@ -8,10 +8,13 @@ jobs:
         - test
     docker:
       # specify the version
-      - image: monachus/hugo
+      - image: trenton/hugo-extended
     working_directory: /site
     steps:
       - checkout
+      # Checkout the same repo, but on the destination branch
+      - checkout /public
+      - run: cd ../public && git checkout test
 
       # specify any bash command here prefixed with `run: `
-      - run: hugo
+      - run: hugo -d /public
