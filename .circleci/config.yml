@@ -2,6 +2,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - master
+        - test
     docker:
       # specify the version
       - image: monachus/hugo
