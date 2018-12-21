@@ -14,7 +14,7 @@ jobs:
       - checkout
       # Checkout the same repo, but on the destination branch
       - checkout:
-        path: /public
+          path: /public
       - run: cd ../public && git checkout test
 
       # specify any bash command here prefixed with `run: `
