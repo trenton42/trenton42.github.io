@@ -3,9 +3,8 @@ version: 2
 jobs:
   build:
     branches:
-      ignore:
-        - master
-        - test
+      only:
+        - content
     docker:
       # specify the version
       - image: trenton/hugo-extended
@@ -18,7 +17,7 @@ jobs:
       # Checkout the same repo, but on the destination branch
       - checkout:
           path: /public
-      - run: cd ../public && git checkout test
+      - run: cd ../public && git checkout master
 
       # specify any bash command here prefixed with `run: `
       - run: hugo -d /public
