@@ -22,4 +22,5 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: hugo -d /public
+      - run: git config --global user.email "deploy@ikso.us" && git config --global user.name "Build Cyborg"
       - run: cd ../public && git add . && git commit -m "Automatic deployment" && git push
