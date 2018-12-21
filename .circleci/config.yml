@@ -11,6 +11,9 @@ jobs:
       - image: trenton/hugo-extended
     working_directory: /site
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "cc:c9:30:35:0a:9e:22:50:67:2f:e4:61:74:6e:9b:4c"
       - checkout
       # Checkout the same repo, but on the destination branch
       - checkout:
