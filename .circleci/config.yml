@@ -30,7 +30,7 @@ jobs:
     - restore_cache:
        key: hugo-site-{{ .Environment.CIRCLE_SHA1 }}
     - run: git config --global user.email "deploy@ikso.us" && git config --global user.name "Build Cyborg"
-    - run: git status --porcelain
+    - run: git status --porcelain && git --no-pager diff
 #        - run: git add . && git commit -m "Automatic deployment [ci skip]" && git push
 workflows:
   version: 2
