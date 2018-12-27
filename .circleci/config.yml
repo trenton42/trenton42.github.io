@@ -2,17 +2,11 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - content
     docker:
       # specify the version
       - image: trenton/hugo-extended
     working_directory: /site
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "cc:c9:30:35:0a:9e:22:50:67:2f:e4:61:74:6e:9b:4c"
       - checkout
       # Checkout the same repo, but on the destination branch
       - checkout:
@@ -21,5 +15,31 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: hugo -d /public
-      - run: git config --global user.email "deploy@ikso.us" && git config --global user.name "Build Cyborg"
-      - run: cd ../public && git add . && git commit -m "Automatic deployment" && git push
+      - save_cache:
+          key: hugo-site-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - /public
+  deploy:
+    docker:
+       - image: trenton/hugo-extended
+    working_directory: /public
+    steps:
+    - add_ssh_keys:
+       fingerprints:
+         - "cc:c9:30:35:0a:9e:22:50:67:2f:e4:61:74:6e:9b:4c"
+    - restore_cache:
+       key: hugo-site-{{ .Environment.CIRCLE_SHA1 }}
+    - run: git config --global user.email "deploy@ikso.us" && git config --global user.name "Build Cyborg"
+    - run: git status --porcelain
+#        - run: git add . && git commit -m "Automatic deployment [ci skip]" && git push
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: content
