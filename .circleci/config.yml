@@ -33,6 +33,8 @@ jobs:
     - run:
         command: |
           if [[ -n $(git status --porcelain) ]]; then
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
           git add . && git commit -m "Automatic deployment [ci skip]" && git push
           fi
 workflows:
