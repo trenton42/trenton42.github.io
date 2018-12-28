@@ -14,7 +14,8 @@ jobs:
       - run: cd ../public && git checkout master
 
       # specify any bash command here prefixed with `run: `
-      - run: hugo -d /public
+      - run: hugo --cleanDestinationDir -d /public
+      - run: cd /public && git status --porcelain
       - save_cache:
           key: hugo-site-{{ .Environment.CIRCLE_SHA1 }}
           paths:
