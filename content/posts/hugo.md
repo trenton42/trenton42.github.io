@@ -5,6 +5,7 @@ draft: false
 tags:
     - code
     - go
+    - hugo
 description: So I've written more blog migrations than blog posts...
 ---
 
