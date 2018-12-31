@@ -1,0 +1,6 @@
+{{ define "main" -}}
+<h2>{{ .Title }}</h2>
+{{ range .Data.Pages -}}
+    <a class="post-tag" href="{{ .Permalink }}">{{ .Title }} ({{ .Data.Pages | len }})</a>&nbsp;
+{{- end }}
+{{- end }}
