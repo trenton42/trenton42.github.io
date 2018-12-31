@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>And now, Hugo! &middot; Trenton Broughton</title>
+  <title>Hugo &middot; Trenton Broughton</title>
 
   
   <link rel="stylesheet" href="https://ikso.us/css/print.css" media="print">
@@ -38,7 +38,7 @@
   <meta name="theme-color" content="#ffffff">
   <script src="https://ikso.us/js/side.js"></script>
   
-  <link href="" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
+  <link href="https://ikso.us/tags/hugo/index.xml" rel="alternate" type="application/rss+xml" title="Trenton Broughton" />
   
   <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
   0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
@@ -69,49 +69,40 @@
 </div>
 
     <div class="content container">
-    <div class="post">
-  <h1>And now, Hugo!</h1>
-  <span class="post-date">Fri, Jan 12, 2018</span>
-  
-  <a class="post-tag" href='/tags/code'>code</a>
-  <a class="post-tag" href='/tags/go'>go</a>
-  <a class="post-tag" href='/tags/hugo'>hugo</a> <p>After forgetting about this for, hmm, three years, I figured it was time to start writing again. And of course, I can&rsquo;t just write. I also have to start over with everything. So this time around I am using <a href="https://gohugo.io/">Hugo</a> for my static site engine.</p>
-
-<p>I enjoy using Hugo as it has some nice tricks up its sleeve while being quite easy to get running.</p>
-
-<p>Recently, I have also been using <a href="https://code.visualstudio.com/">VSCode</a>, and to make it a little easier to generate posts I use the following <code>launch.json</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">See</span> <span style="color:#960050;background-color:#1e0010">https://go.microsoft.com/fwlink/?LinkId=733558</span>
-    <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">documentation</span> <span style="color:#960050;background-color:#1e0010">about</span> <span style="color:#960050;background-color:#1e0010">the</span> <span style="color:#960050;background-color:#1e0010">tasks.json</span> <span style="color:#960050;background-color:#1e0010">format</span>
-    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;2.0.0&#34;</span>,
-    <span style="color:#f92672">&#34;tasks&#34;</span>: [
-        {
-            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;New Content&#34;</span>,
-            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;shell&#34;</span>,
-            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;read -p &#39;set_color green; echo -n \&#34;Enter path for file \&#34;; set_color normal; echo \&#34;&gt; \&#34;&#39; pth; and hugo new \&#34;$pth\&#34; --editor code&#34;</span>,
-            <span style="color:#f92672">&#34;presentation&#34;</span>: {
-                <span style="color:#f92672">&#34;echo&#34;</span>: <span style="color:#66d9ef">true</span>,
-                <span style="color:#f92672">&#34;reveal&#34;</span>: <span style="color:#e6db74">&#34;always&#34;</span>,
-                <span style="color:#f92672">&#34;focus&#34;</span>: <span style="color:#66d9ef">true</span>,
-                <span style="color:#f92672">&#34;panel&#34;</span>: <span style="color:#e6db74">&#34;shared&#34;</span>
-            },
-            <span style="color:#f92672">&#34;problemMatcher&#34;</span>: []
-        }
-    ]
-}</code></pre></div>
-<p>This adds a launch task to create a new page, prompting for the name of the file.</p>
-
-<p>There is also the <a href="https://marketplace.visualstudio.com/items?itemName=akmittal.hugofy">Hugofy</a> extension for VSCode, however this is more than I need at this point.</p>
-
-</div>
-
-
+    <h2>Hugo</h2>
+<ul class="posts">
+  <li>
+    <span>
+      <time class="post-list">2018-12-30</time>
+      <a href="https://ikso.us/posts/automatic-hugo-deployments/">Automatic Hugo Site Deployments With CircleCI</a>
+      <p>
+        Make publishing your Hugo site completely automatic!
+      </p>
+    </span>
+  </li><li>
+    <span>
+      <time class="post-list">2018-12-05</time>
+      <a href="https://ikso.us/posts/migrating-from-blogger/">Migrating From Blogger</a>
+      <p>
+        Migrating posts from Blogger to Hugo (or something else) turned out to not be as horrible as I first thought.
+      </p>
+    </span>
+  </li><li>
+    <span>
+      <time class="post-list">2018-01-12</time>
+      <a href="https://ikso.us/posts/hugo/">And now, Hugo!</a>
+      <p>
+        So I&#39;ve written more blog migrations than blog posts...
+      </p>
+    </span>
+  </li>
+</ul>
     </div>
 
     
     
     <script>
-      mixpanel.track("Page View", {page: "\/posts\/hugo\/"});
+      mixpanel.track("Page View", {page: "\/tags\/hugo\/"});
     </script>
     
   </body>

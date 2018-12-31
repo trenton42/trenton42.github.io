@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Automatic Hugo Site Deployments With CircleCI</title>
+      <link>https://ikso.us/posts/automatic-hugo-deployments/</link>
+      <pubDate>Sun, 30 Dec 2018 17:58:01 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/automatic-hugo-deployments/</guid>
+      <description>Generating static sites with Hugo is easy enough, but I wanted something a little more automated. I also wanted to deploy my site to Github Pages from another computer (or even my phone) without needing to run the hugo command locally and pushing the generated code back to Github. If you are unfamiliar with Github Pages, check out the introduction.
+Prep Work &amp;ndash; Getting Things Set Up CircleCI uses Docker containers to run CI jobs, so I knew that I would need a Hugo image to build my site.</description>
+    </item>
+    
+    <item>
       <title>Why You Need a Kubernetes Upgrade Path</title>
       <link>https://ikso.us/posts/why-you-need-an-upgrade-path/</link>
       <pubDate>Sat, 15 Dec 2018 09:07:10 -0500</pubDate>

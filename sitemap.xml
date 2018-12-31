@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ikso.us/posts/automatic-hugo-deployments/</loc>
+    <lastmod>2018-12-30T17:58:01-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikso.us/posts/why-you-need-an-upgrade-path/</loc>
     <lastmod>2018-12-15T09:07:10-05:00</lastmod>
   </url>
@@ -140,13 +145,19 @@
   
   <url>
     <loc>https://ikso.us/tags/code/</loc>
-    <lastmod>2018-12-05T21:44:57-05:00</lastmod>
+    <lastmod>2018-12-30T17:58:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ikso.us/tags/go/</loc>
     <lastmod>2018-01-12T21:41:07-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ikso.us/tags/hugo/</loc>
+    <lastmod>2018-12-30T17:58:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
