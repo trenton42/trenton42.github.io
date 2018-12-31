@@ -4,6 +4,7 @@ date: 2018-12-30T17:58:01-05:00
 draft: false
 tags:
     - code
+    - hugo
 description: Make publishing your Hugo site completely automatic!
 ---
 

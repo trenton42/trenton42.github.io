@@ -4,6 +4,7 @@ date: 2018-12-05T21:44:57-05:00
 draft: false
 tags:
     - code
+    - hugo
 description: Migrating posts from Blogger to Hugo (or something else) turned out to not be as horrible as I first thought.
 ---
 
