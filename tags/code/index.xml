@@ -6,10 +6,19 @@
     <description>Recent content in Code on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Dec 2018 17:58:01 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 21:48:16 -0500</lastBuildDate>
     
 	<atom:link href="https://ikso.us/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go For a Loop</title>
+      <link>https://ikso.us/posts/go-for-a-loop/</link>
+      <pubDate>Tue, 15 Jan 2019 21:48:16 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/go-for-a-loop/</guid>
+      <description>Go, like many languages, has a for loop. The snippet below can help to understand the versatility of these loops. This mechanism goes well beyond simply counting integers, but can be used to implement any number of looping patterns. The important thing to remember is that the second expression in the for loop definition controls the loop, and can be used with any function or method that returns a bool, or any expression that evaluates to a bool.</description>
+    </item>
     
     <item>
       <title>Automatic Hugo Site Deployments With CircleCI</title>
