@@ -1,0 +1,14 @@
+name: CI
+
+on: 
+  push:
+    branches:
+      - content
+jobs:
+  build:
+    container: trenton/hugo-extended
+    steps:
+    - name: Where are we?
+      run: pwd
+    - name: What is here?
+      run: ls -l
