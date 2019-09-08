@@ -6,6 +6,7 @@ on:
       - content
 jobs:
   build:
+    runs-on: ubuntu-latest
     container: trenton/hugo-extended
     steps:
     - name: Where are we?
