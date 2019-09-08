@@ -10,6 +10,8 @@ jobs:
     container: trenton/hugo-extended
     steps:
     - name: Where are we?
+      uses: docker://trenton/hugo-extended
       run: pwd
     - name: What is here?
+      uses: docker://trenton/hugo-extended
       run: ls -l
