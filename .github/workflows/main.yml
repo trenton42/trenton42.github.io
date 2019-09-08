@@ -10,8 +10,10 @@ jobs:
     container: trenton/hugo-extended
     steps:
     - uses: actions/checkout@v1
-    - name: Where are we?
-      run: pwd
+    - uses: actions/checkout@v1
+      with:
+        ref: master
+        path: ./public
     - name: What is here?
       run: ls -l
     - name: What does uses do?
