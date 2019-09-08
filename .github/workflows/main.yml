@@ -7,11 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: trenton/hugo-extended
     steps:
+    - uses: actions/checkout@v1
     - name: Where are we?
       run: pwd
     - name: What is here?
-      run: ls -l ..
+      run: ls -l
     - name: What does uses do?
       uses: docker://trenton/hugo-extended
     - name: List again
