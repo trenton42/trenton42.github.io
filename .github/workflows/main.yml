@@ -15,8 +15,8 @@ jobs:
         ref: master
         path: ./trenton42.github.com/public
     - name: What is here?
-      run: ls -l && pwd
-    - name: What does uses do?
-      uses: docker://trenton/hugo-extended
-    - name: List again
-      run: ls -l
+      run: cd .. && ls -l && pwd
+    - name: Run Hugo
+      run: hugo --cleanDestinationDir -d /public
+    - name: Get Build Status
+      run: cd /public && git status --porcelain
