@@ -15,7 +15,7 @@ jobs:
         ref: master
         path: ./trenton42.github.com/public
     - name: What is here?
-      run: ls -l
+      run: ls -l && pwd
     - name: What does uses do?
       uses: docker://trenton/hugo-extended
     - name: List again
