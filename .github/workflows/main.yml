@@ -19,4 +19,4 @@ jobs:
     - name: Run Hugo
       run: hugo --cleanDestinationDir -d /public
     - name: Get Build Status
-      run: cd /public && git status --porcelain
+      run: cd public && git status --porcelain
