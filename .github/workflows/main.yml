@@ -19,6 +19,6 @@ jobs:
     - name: Get public
       run: pwd && ls && ls ..
     - name: Run Hugo
-      run: hugo --cleanDestinationDir -d /public
+      run: hugo -d /public
     - name: Get Build Status
       run: cd public && git status --porcelain
