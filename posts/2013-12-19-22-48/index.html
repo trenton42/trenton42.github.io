@@ -4,7 +4,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -62,7 +62,7 @@
       <li><a href="/posts/about/"> About Me </a></li><li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
     </ul>
 
-    <p>&copy; 2019. All rights reserved. </p>
+    <p>&copy; 2020. All rights reserved. </p>
   </div>
 </div>
 
@@ -72,17 +72,18 @@
   <span class="post-date">Thu, Dec 19, 2013</span>
   
   <a class="post-tag" href='/tags/code'>code</a>
-  <a class="post-tag" href='/tags/python'>python</a> <p>Recently i started using <a href="http://www.mailgun.com" title="Mailgun by Rackspace">Mailgun</a> for our outgoing messages. They have a very nice   <a href="http://documentation.mailgun.com" title="Mailgun API documentation">API</a>, and take a lot of the heavy lifting out of creating multipart messages.</p>
-
+  <a class="post-tag" href='/tags/python'>python</a> <p>Recently i started using <a href="http://www.mailgun.com" title="Mailgun by Rackspace">Mailgun</a> for our outgoing messages. They have a very nice	 <a href="http://documentation.mailgun.com" title="Mailgun API documentation">API</a>, and take a lot of the heavy lifting out of creating multipart messages.</p>
 <p>If you are using <a href="http://docs.python-requests.org/en/latest/" title="Python Requests library">requests</a> (or <a href="https://github.com/dreid/treq/" title="Python Twisted Requests">treq</a>) to send the messages through their REST API, however, you may have noticed that you must specify &ldquo;attachment&rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&rsquo;t work. Added a <code>name</code> attribute to the StringIO class does the trick:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NamedStringIO</span>(StringIO):
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NamedStringIO</span>(StringIO):
     name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 
     <span style="color:#66d9ef">def</span> __init__(self, data, name<span style="color:#f92672">=</span>None):
         <span style="color:#66d9ef">if</span> name:
             self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
-        StringIO<span style="color:#f92672">.</span>__init__(self, data)</code></pre></div>
-<p>Now using their <a href="http://documentation.mailgun.com/quickstart.html#sending-messages" title="Mailgun example: sending a message">example</a> will work:</p>
+        StringIO<span style="color:#f92672">.</span>__init__(self, data)
+
+</code></pre></div><p>Now using their <a href="http://documentation.mailgun.com/quickstart.html#sending-messages" title="Mailgun example: sending a message">example</a> will work:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> paste.util <span style="color:#f92672">import</span> MultiDict
 
 good <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db74">&#34;This is some good data&#34;</span>, <span style="color:#e6db74">&#34;good.txt&#34;</span>)
@@ -100,7 +101,8 @@ more <span style="color:#f92672">=</span> NamedStringIO(<span style="color:#e6db
               <span style="color:#e6db74">&#34;bcc&#34;</span>: <span style="color:#e6db74">&#34;bar@example.com&#34;</span>,
               <span style="color:#e6db74">&#34;subject&#34;</span>: <span style="color:#e6db74">&#34;Hello&#34;</span>,
               <span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Testing some Mailgun awesomness!&#34;</span>,
-              <span style="color:#e6db74">&#34;html&#34;</span>: <span style="color:#e6db74">&#34;&lt;html&gt;HTML version of the body&lt;/html&gt;&#34;</span>})</code></pre></div>
+              <span style="color:#e6db74">&#34;html&#34;</span>: <span style="color:#e6db74">&#34;&lt;html&gt;HTML version of the body&lt;/html&gt;&#34;</span>})
+</code></pre></div>
 </div>
 
 

@@ -4,7 +4,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -62,7 +62,7 @@
       <li><a href="/posts/about/"> About Me </a></li><li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
     </ul>
 
-    <p>&copy; 2019. All rights reserved. </p>
+    <p>&copy; 2020. All rights reserved. </p>
   </div>
 </div>
 
@@ -73,9 +73,7 @@
   
   <a class="post-tag" href='/tags/code'>code</a>
   <a class="post-tag" href='/tags/hugo'>hugo</a> <p>Yesterday, I suddenly remembered that I had written several posts on Blogger and forgotten all about them. I decided to migrate the content over to Hugo and take advantage of Google&rsquo;s <a href="https://takeout.google.com/">Takeout</a> program.</p>
-
 <p>I wasn&rsquo;t really sure what I would get when exporting a blog, but I was not thrilled when I downloaded my content. Instead of a directory of HTML files, I received a single ATOM feed of all of my posts. After considering a couple of different ways I could slice up the data, I decided on a simple bash script and a tool called <a href="http://xmlstar.sourceforge.net/overview.php">XMLStarlet</a> (available in homebrew on MacOS).</p>
-
 <p>Here is the script I used to convert the entries:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
@@ -107,8 +105,8 @@ COUNT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>xm
     <span style="color:#75715e"># xmlstarlet has an easy way to do that.</span>
     echo $DATA | xml sel -t -m <span style="color:#e6db74">&#34;feed/entry[</span>$i<span style="color:#e6db74">]&#34;</span> -v content | xml unesc &gt;&gt; $FILENAME
     <span style="color:#75715e"># tada!</span>
-<span style="color:#66d9ef">done</span></code></pre></div>
-<p>Now there is just some light dusting to be done in the content (depending on how much markup was in each blog post). Also, don&rsquo;t forget that images will be hotlinked to Blogger, and those will probably not work if the blog is ever deleted. I went through and made sure that I had downloaded any images I used in my posts.</p>
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>Now there is just some light dusting to be done in the content (depending on how much markup was in each blog post). Also, don&rsquo;t forget that images will be hotlinked to Blogger, and those will probably not work if the blog is ever deleted. I went through and made sure that I had downloaded any images I used in my posts.</p>
 
 </div>
 

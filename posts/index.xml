@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blahg Posts on Trenton Broughton</title>
@@ -88,7 +88,7 @@ Simple enough! You can find those two actions under the Internet section in the 
       <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
       
       <guid>https://ikso.us/posts/2013-12-19-22-48/</guid>
-      <description>Recently i started using Mailgun for our outgoing messages. They have a very nice API, and take a lot of the heavy lifting out of creating multipart messages.
+      <description>Recently i started using Mailgun for our outgoing messages. They have a very nice	API, and take a lot of the heavy lifting out of creating multipart messages.
 If you are using requests (or treq) to send the messages through their REST API, however, you may have noticed that you must specify &amp;ldquo;attachment&amp;rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&amp;rsquo;t work.</description>
     </item>
     
@@ -109,9 +109,9 @@ First things first, i need some text. Time to turn to trusty Project Gutenberg. 
       
       <guid>https://ikso.us/posts/2013-12-02-12-47/</guid>
       <description>In this holiday season (and pretty much any other time, now) it is nearly impossible to avoid the bombardment of advertisements. Maybe i&amp;rsquo;ve been growing cynical, but i have become a lot more antagonistic toward companies that advertise in ways i don&amp;rsquo;t like. So here is the handy guide i use to interpret ads.
- Sign says: &amp;ldquo;Deals starting at just $20!&amp;rdquo;
+  Sign says: &amp;ldquo;Deals starting at just $20!&amp;rdquo;
 i read: &amp;ldquo;Absolutely nothing under $20&amp;rdquo;
- Sign says: &amp;ldquo;Save at up to $10!</description>
+  Sign says: &amp;ldquo;Save at up to $10!</description>
     </item>
     
     <item>
@@ -150,7 +150,8 @@ i will also hopefully get the template i made for it packaged up. i&amp;rsquo;m 
       <pubDate>Fri, 06 Sep 2013 13:39:00 +0000</pubDate>
       
       <guid>https://ikso.us/posts/all-of-your-friends-are-doing-it/</guid>
-      <description>All Your Data Are Belong to Us Recently I was browsing LinkedIn when I saw this banner:    Grow your network!!!   Then, the next day they send me an email:      34 people now? Are you just making up these numbers?  It seems they really, really want me to give up my address book. They even call out my friends who have already done this, implying that my unfortunate pals endorse this sort of behaviour.</description>
+      <description>All Your Data Are Belong to Us Recently I was browsing LinkedIn when I saw this banner:
+   Grow your network!!!   Then, the next day they send me an email:      34 people now? Are you just making up these numbers?  It seems they really, really want me to give up my address book. They even call out my friends who have already done this, implying that my unfortunate pals endorse this sort of behaviour.</description>
     </item>
     
     <item>
@@ -178,7 +179,7 @@ i will also hopefully get the template i made for it packaged up. i&amp;rsquo;m 
       <pubDate>Wed, 25 Apr 2012 20:23:00 +0000</pubDate>
       
       <guid>https://ikso.us/posts/rethinking-urban-life-culture-and/</guid>
-      <description>Not so long ago, we had a dream. The dream went a little like this: 2.4 children, a dog, a cat, a house in the suburbs and a 9-5 job at that big,&amp;nbsp;faceless&amp;nbsp;company in the city. Who knows what they did at that company, but as long as we kept pushing the blue button after the yellow button, we knew that when we reached 65 years and 1 day old, we would have that nice pension that would take care of us.</description>
+      <description>Not so long ago, we had a dream. The dream went a little like this: 2.4 children, a dog, a cat, a house in the suburbs and a 9-5 job at that big, faceless company in the city. Who knows what they did at that company, but as long as we kept pushing the blue button after the yellow button, we knew that when we reached 65 years and 1 day old, we would have that nice pension that would take care of us.</description>
     </item>
     
     <item>

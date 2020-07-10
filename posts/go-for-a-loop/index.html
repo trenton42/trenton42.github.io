@@ -4,7 +4,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -62,7 +62,7 @@
       <li><a href="/posts/about/"> About Me </a></li><li><a href="/posts/"> Blahg Posts </a></li><li><a href="/machine/"> Machine </a></li>
     </ul>
 
-    <p>&copy; 2019. All rights reserved. </p>
+    <p>&copy; 2020. All rights reserved. </p>
   </div>
 </div>
 
@@ -72,7 +72,7 @@
   <span class="post-date">Tue, Jan 15, 2019</span>
   
   <a class="post-tag" href='/tags/go'>go</a>
-  <a class="post-tag" href='/tags/code'>code</a> <p>Go, like many languages, has a <code>for</code> loop. The snippet below can help to understand the versatility of these loops. This mechanism goes well beyond simply counting integers, but can be used to implement any number of looping patterns. The important thing to remember is that the second expression in the for loop definition controls the loop, and can be used with any function or method that returns a <code>bool</code>, or any expression that evaluates to a <code>bool</code>. Also remember that the three expressions are all optional<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
+  <a class="post-tag" href='/tags/code'>code</a> <p>Go, like many languages, has a <code>for</code> loop. The snippet below can help to understand the versatility of these loops. This mechanism goes well beyond simply counting integers, but can be used to implement any number of looping patterns. The important thing to remember is that the second expression in the for loop definition controls the loop, and can be used with any function or method that returns a <code>bool</code>, or any expression that evaluates to a <code>bool</code>. Also remember that the three expressions are all optional<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
@@ -105,8 +105,9 @@
 		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;This is in the loop&#34;</span>)
 	}
 	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Done Looping&#34;</span>)
-}</code></pre></div>
-<p>Running this produces the output:</p>
+}
+
+</code></pre></div><p>Running this produces the output:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">The loop has started!
 Checking if cnt is greater than 5 (it&#39;s 1)
 This is in the loop
@@ -124,17 +125,16 @@ Checking if cnt is greater than 5 (it&#39;s 5)
 This is in the loop
 Incrementing cnt from 5 to 6...
 Checking if cnt is greater than 5 (it&#39;s 6)
-Done Looping</code></pre></div>
-<p>You can run this locally, or view it on <a href="https://play.golang.org/p/a0WdDAADH2h">The Go Playground</a></p>
-<div class="footnotes">
-
-<hr />
-
+Done Looping
+</code></pre></div><p>You can run this locally, or view it on <a href="https://play.golang.org/p/a0WdDAADH2h">The Go Playground</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1"><a href="https://golang.org/ref/spec#For_statements">https://golang.org/ref/spec#For_statements</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://golang.org/ref/spec#For_statements">https://golang.org/ref/spec#For_statements</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
 </div>
 

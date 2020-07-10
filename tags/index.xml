@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Trenton Broughton</title>
@@ -6,22 +6,13 @@
     <description>Recent content in Tags on Trenton Broughton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 May 2014 09:03:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 21:48:16 -0500</lastBuildDate>
     
 	<atom:link href="https://ikso.us/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Boring Posts</title>
-      <link>https://ikso.us/tags/boring-posts/</link>
-      <pubDate>Tue, 20 May 2014 09:03:00 -0500</pubDate>
-      
-      <guid>https://ikso.us/tags/boring-posts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code</title>
+      <title>code</title>
       <link>https://ikso.us/tags/code/</link>
       <pubDate>Tue, 15 Jan 2019 21:48:16 -0500</pubDate>
       
@@ -30,7 +21,7 @@
     </item>
     
     <item>
-      <title>Go</title>
+      <title>go</title>
       <link>https://ikso.us/tags/go/</link>
       <pubDate>Tue, 15 Jan 2019 21:48:16 -0500</pubDate>
       
@@ -39,7 +30,7 @@
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>https://ikso.us/tags/hugo/</link>
       <pubDate>Sun, 30 Dec 2018 17:58:01 -0500</pubDate>
       
@@ -48,7 +39,7 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
+      <title>kubernetes</title>
       <link>https://ikso.us/tags/kubernetes/</link>
       <pubDate>Sat, 15 Dec 2018 09:07:10 -0500</pubDate>
       
@@ -57,20 +48,29 @@
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://ikso.us/tags/life/</link>
-      <pubDate>Mon, 02 Dec 2013 12:47:00 -0500</pubDate>
+      <title>boring posts</title>
+      <link>https://ikso.us/tags/boring-posts/</link>
+      <pubDate>Tue, 20 May 2014 09:03:00 -0500</pubDate>
       
-      <guid>https://ikso.us/tags/life/</guid>
+      <guid>https://ikso.us/tags/boring-posts/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
+      <title>python</title>
       <link>https://ikso.us/tags/python/</link>
       <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
       
       <guid>https://ikso.us/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://ikso.us/tags/life/</link>
+      <pubDate>Mon, 02 Dec 2013 12:47:00 -0500</pubDate>
+      
+      <guid>https://ikso.us/tags/life/</guid>
       <description></description>
     </item>
     
