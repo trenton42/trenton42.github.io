@@ -9,17 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     container: trenton/hugo-extended
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkout public
+      uses: actions/checkout@v2
       with:
-        path: ./site
-    - name: Look
-      run: ls && ls site
-    - uses: actions/checkout@v1
-      with:
-        ref: master
-        path: ./public
+        path: public
+        branch: master
     - name: Get public
-      run: ls && ls public
+      run: pwd && ls && ls ..
     - name: Run Hugo
       run: hugo --cleanDestinationDir -d /public
     - name: Get Build Status
