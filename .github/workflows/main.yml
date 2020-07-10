@@ -1,4 +1,4 @@
-name: CI
+name: Blagh-o-matic
 
 on: 
   push:
@@ -18,5 +18,5 @@ jobs:
         ref: master
     - name: Run Hugo
       run: hugo --cleanDestinationDir -d public
-    - name: Get Build Status
-      run: cd public && git status --porcelain
+    - name: Publish
+      run: cd public && [[ -n "$(git status --porcelain)" ]] && ( git add . && git commit -m "Updated content" && git push ) || echo "Nothing to do"
