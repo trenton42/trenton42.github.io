@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     container: trenton/hugo-extended
     steps:
-    - name: test git
-      run: which git && git --version
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkout public
@@ -18,9 +16,7 @@ jobs:
       with:
         path: public
         ref: master
-    - name: Get public
-      run: ls -la public
     - name: Run Hugo
-      run: hugo -d public
+      run: hugo --cleanDestinationDir -d public
     - name: Get Build Status
-      run: ls -la public && cd public && git status --porcelain
+      run: cd public && git status --porcelain
