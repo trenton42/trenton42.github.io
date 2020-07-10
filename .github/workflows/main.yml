@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Get public
-      run: cd public && git clone --single-branch --branch master git@github.com:trenton42/trenton42.github.io.git
+      run: ls && mkdir -p public && cd public && git clone --single-branch --branch master git@github.com:trenton42/trenton42.github.io.git
     - name: Run Hugo
       run: hugo --cleanDestinationDir -d /public
     - name: Get Build Status
