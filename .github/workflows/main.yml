@@ -17,8 +17,8 @@ jobs:
         path: public
         branch: master
     - name: Get public
-      run: pwd && ls && ls ..
+      run: ls -la public
     - name: Run Hugo
-      run: hugo -d /public
+      run: hugo -d public
     - name: Get Build Status
-      run: cd public && git status --porcelain
+      run: ls -la public && cd public && git status --porcelain
