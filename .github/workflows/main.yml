@@ -9,13 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     container: trenton/hugo-extended
     steps:
+    - name: test git
+      run: which git && git --version
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkout public
       uses: actions/checkout@v2
       with:
         path: public
-        branch: master
+        ref: master
     - name: Get public
       run: ls -la public
     - name: Run Hugo
