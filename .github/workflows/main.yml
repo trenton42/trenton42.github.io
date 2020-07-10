@@ -10,8 +10,16 @@ jobs:
     container: trenton/hugo-extended
     steps:
     - uses: actions/checkout@v1
+      with:
+        path: ./site
+    - name: Look
+      run: ls && ls site
+    - uses: actions/checkout@v1
+      with:
+        ref: master
+        path: ./public
     - name: Get public
-      run: ls && mkdir -p public && cd public && git clone --single-branch --branch master git@github.com:trenton42/trenton42.github.io.git
+      run: ls && ls public
     - name: Run Hugo
       run: hugo --cleanDestinationDir -d /public
     - name: Get Build Status
