@@ -4,7 +4,7 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="generator" content="Hugo 0.73.0" />
+  <meta name="generator" content="Hugo 0.76.5" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -102,25 +102,25 @@
 <h3 id="the-pipeline">The Pipeline</h3>
 <p>My final pipeline is rather lengthy, so I will not copy it in its entirety here. You can view it on this site&rsquo;s <a href="https://github.com/trenton42/trenton42.github.io/blob/content/.circleci/config.yml">Github Repo</a>. I will point out a few key areas that relate to my goals, though.</p>
 <p>The <code>workflows</code> section controls what jobs are actually run and when:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">workflows</span>:
-  <span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">2</span>
-  <span style="color:#66d9ef">build_and_deploy</span>:
-    <span style="color:#66d9ef">jobs</span>:
-      - build <span style="color:#75715e"># This job will run on any branch and fulfils goal ⓵</span>
-      - <span style="color:#66d9ef">deploy</span>:
-          <span style="color:#66d9ef">requires</span>:
-            - build
-          <span style="color:#66d9ef">filters</span>:
-            <span style="color:#66d9ef">branches</span>:
-              <span style="color:#66d9ef">only</span>: content <span style="color:#75715e"># The deploy job will only run on the main branch for goal ⓶</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">workflows</span>:
+  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
+  <span style="color:#f92672">build_and_deploy</span>:
+    <span style="color:#f92672">jobs</span>:
+      - <span style="color:#ae81ff">build</span> <span style="color:#75715e"># This job will run on any branch and fulfils goal ⓵</span>
+      - <span style="color:#f92672">deploy</span>:
+          <span style="color:#f92672">requires</span>:
+            - <span style="color:#ae81ff">build</span>
+          <span style="color:#f92672">filters</span>:
+            <span style="color:#f92672">branches</span>:
+              <span style="color:#f92672">only</span>: <span style="color:#ae81ff">content</span> <span style="color:#75715e"># The deploy job will only run on the main branch for goal ⓶</span>
 </code></pre></div><p>In order to prevent the pipeline to attempt to run on my generated branch, I add the text <code>[ci skip]</code> to the commit message on my generated branch (goal ⓷).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add . <span style="color:#f92672">&amp;&amp;</span> git commit -m <span style="color:#e6db74">&#34;Automatic deployment [ci skip]&#34;</span> <span style="color:#f92672">&amp;&amp;</span> git push
 </code></pre></div><p>Finally, to check if anything has changed (goal ⓸), I wrapped the entire command in an if statement:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -n <span style="color:#66d9ef">$(</span>git status --porcelain<span style="color:#66d9ef">)</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
 </code></pre></div><h3 id="side-notes">Side Notes</h3>
 <p>You might have noticed that I add an ssh key in one of the steps:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">add_ssh_keys</span>:
-    <span style="color:#66d9ef">fingerprints</span>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">add_ssh_keys</span>:
+    <span style="color:#f92672">fingerprints</span>:
         - <span style="color:#e6db74">&#34;cc:c9:30:35:0a:9e:22:50:67:2f:e4:61:74:6e:9b:4c&#34;</span>
 </code></pre></div><p>This is because CircleCI will create a read only key to checkout and test your code, but I need to make a commit and push back to Github. To get around this, I created another <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">deploy key</a> with write permissions to this repository. If you follow these steps, you will need to change the fingerprint to match your own deploy key.</p>
 <p>You also will see that there is a <code>save_cache</code> step and a <code>restore_cache</code> step in the two jobs. This is because each job runs in an isolated container, and has no persistent state that is preserved between the jobs. Using the cache allows me to avoid building the site twice (once in each step).</p>
