@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jan 2018 21:47:04 -0500</lastBuildDate><atom:link href="https://ikso.us/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Unmarshalling a timestamp to time.Time from JSON in go</title>
+      <link>https://ikso.us/posts/unmarshal-timestamp-as-time/</link>
+      <pubDate>Sat, 17 Oct 2020 02:34:22 +0000</pubDate>
+      
+      <guid>https://ikso.us/posts/unmarshal-timestamp-as-time/</guid>
+      <description>Sometimes when working with remote APIs, you will come across dates formatted as Unix timestamps (an integer number of seconds since the epoch1). Go has a very nice native type for dealing with times, though, and it would be nice to be able to directly unmarshal2 to that type without doing the type conversions later. Fortunately, we can do easily do this by overriding the UnmarshalJSON method.
+To do this, we will create a custom type that embeds time.</description>
+    </item>
+    
+    <item>
       <title>Go For a Loop</title>
       <link>https://ikso.us/posts/go-for-a-loop/</link>
       <pubDate>Tue, 15 Jan 2019 21:48:16 -0500</pubDate>
