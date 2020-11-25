@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Oct 2020 02:34:22 +0000</lastBuildDate><atom:link href="https://ikso.us/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Unmarshalling a timestamp to time.Time from JSON in go</title>
+      <title>Unmarshalling a Unix timestamp to time.Time from JSON in go</title>
       <link>https://ikso.us/posts/unmarshal-timestamp-as-time/</link>
       <pubDate>Sat, 17 Oct 2020 02:34:22 +0000</pubDate>
       
