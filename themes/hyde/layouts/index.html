@@ -3,18 +3,19 @@
 {{ .Content }}
 <div class="posts">
   <h2>Most recent posts</h2>
-  <div class="post-boxes">
-    {{ range first 3 (where .Data.Pages "Section" "posts") -}}
-    <div class="post-box">
-      <h3 class="post-title">
+  <ul class="posts">
+    {{ range first 3 (where .Site.Pages "Section" "posts") -}}
+    <li>
+      <span>
+        <time class="post-list">{{ .Date.Format "2006-01-02" }}</time>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-      </h3>
-
-      <div>{{ .Description }} <a href="{{ .Permalink }}">Read More &raquo;</a></div>
-    </div>
+        <p>
+          {{ .Description}}
+        </p>
+      </span>
+    </li>
     {{- end }}
-  </div>
+  </ul>
 </div>
 <p>Read more posts on the
   <a href='{{ "posts" | relURL }}'>blahg &raquo;</a>
