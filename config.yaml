@@ -5,7 +5,6 @@ theme: "hyde"
 PygmentsCodeFences: true
 params:
   description: "danger: high entropy"
-  MixpanelID: 91c8afbed5c11f8feee5b2d5f28de5d5
 markup:
   goldmark:
     renderer:
