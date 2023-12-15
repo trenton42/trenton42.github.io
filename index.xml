@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jan 2018 21:47:04 -0500</lastBuildDate><atom:link href="https://ikso.us/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Thinking about loss</title>
+      <link>https://ikso.us/posts/thinking-about-loss/</link>
+      <pubDate>Mon, 19 Sep 2022 09:22:56 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/thinking-about-loss/</guid>
+      <description>It started with a song It was a chance sound. The simple humming of a couple of bars of a song triggered by something else in the conversation, but that is all it takes sometimes. Suddenly I was standing in Toronto around 1997 hearing that same song and seeing the person that would be forever connected to it. I feel fortunate that the only way I can see your face is always in mid laugh.</description>
+    </item>
+    
+    <item>
       <title>Unmarshalling a Unix timestamp to time.Time from JSON in go</title>
       <link>https://ikso.us/posts/unmarshal-timestamp-as-time/</link>
       <pubDate>Sat, 17 Oct 2020 02:34:22 +0000</pubDate>
