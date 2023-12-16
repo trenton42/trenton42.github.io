@@ -2,4 +2,12 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
+{{ range .Site.Taxonomies.categories.Alphabetical }}
+<div>
+<p>{{ .Title }}</p>
+{{ range .Pages }}
+<p>{{ .Title }}</p>
+{{ end }}
+</div>
+{{ end }}
 {{- end }}
