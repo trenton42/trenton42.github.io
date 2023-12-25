@@ -2,6 +2,8 @@
 title: Unmarshalling a Unix timestamp to time.Time from JSON in go
 date: 2020-10-17T02:34:22Z
 draft: false
+categories:
+    - code
 tags:
     - go
     - code
