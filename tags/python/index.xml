@@ -13,7 +13,7 @@
       <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
       
       <guid>https://ikso.us/posts/2013-12-19-22-48/</guid>
-      <description>Recently i started using Mailgun for our outgoing messages. They have a very nice	API, and take a lot of the heavy lifting out of creating multipart messages.
+      <description>Recently I started using Mailgun for our outgoing messages. They have a very nice API, and take a lot of the heavy lifting out of creating multipart messages.
 If you are using requests (or treq) to send the messages through their REST API, however, you may have noticed that you must specify &amp;ldquo;attachment&amp;rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&amp;rsquo;t work.</description>
     </item>
     

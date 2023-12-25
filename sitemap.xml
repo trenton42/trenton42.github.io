@@ -11,10 +11,16 @@
     <loc>https://ikso.us/posts/thinking-about-loss/</loc>
     <lastmod>2022-09-19T09:22:56-05:00</lastmod>
   </url><url>
+    <loc>https://ikso.us/categories/</loc>
+    <lastmod>2020-10-17T02:34:22+00:00</lastmod>
+  </url><url>
     <loc>https://ikso.us/tags/code/</loc>
     <lastmod>2020-10-17T02:34:22+00:00</lastmod>
   </url><url>
     <loc>https://ikso.us/tags/go/</loc>
+    <lastmod>2020-10-17T02:34:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ikso.us/categories/code/</loc>
     <lastmod>2020-10-17T02:34:22+00:00</lastmod>
   </url><url>
     <loc>https://ikso.us/posts/unmarshal-timestamp-as-time/</loc>
@@ -115,7 +121,5 @@
   </url><url>
     <loc>https://ikso.us/posts/two-tips-for-faster-email-reading-in/</loc>
     <lastmod>2011-07-26T02:58:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ikso.us/categories/</loc>
   </url>
 </urlset>

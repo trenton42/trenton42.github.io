@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>On Code on Trenton Broughton</title>
+    <link>https://ikso.us/categories/code/</link>
+    <description>Recent content in On Code on Trenton Broughton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2020 02:34:22 +0000</lastBuildDate><atom:link href="https://ikso.us/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unmarshalling a Unix timestamp to time.Time from JSON in go</title>
+      <link>https://ikso.us/posts/unmarshal-timestamp-as-time/</link>
+      <pubDate>Sat, 17 Oct 2020 02:34:22 +0000</pubDate>
+      
+      <guid>https://ikso.us/posts/unmarshal-timestamp-as-time/</guid>
+      <description>Sometimes when working with remote APIs, you will come across dates formatted as Unix timestamps (an integer number of seconds since the epoch1). Go has a very nice native type for dealing with times, though, and it would be nice to be able to directly unmarshal2 to that type without doing the type conversions later. Fortunately, we can do easily do this by overriding the UnmarshalJSON method.
+To do this, we will create a custom type that embeds time.</description>
+    </item>
+    
+    <item>
+      <title>Go For a Loop</title>
+      <link>https://ikso.us/posts/go-for-a-loop/</link>
+      <pubDate>Tue, 15 Jan 2019 21:48:16 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/go-for-a-loop/</guid>
+      <description>Go, like many languages, has a for loop. The snippet below can help to understand the versatility of these loops. This mechanism goes well beyond simply counting integers, but can be used to implement any number of looping patterns. The important thing to remember is that the second expression in the for loop definition controls the loop, and can be used with any function or method that returns a bool, or any expression that evaluates to a bool.</description>
+    </item>
+    
+    <item>
+      <title>Attaching StringIO Data to a Mailgun Message</title>
+      <link>https://ikso.us/posts/2013-12-19-22-48/</link>
+      <pubDate>Thu, 19 Dec 2013 22:53:00 -0500</pubDate>
+      
+      <guid>https://ikso.us/posts/2013-12-19-22-48/</guid>
+      <description>Recently I started using Mailgun for our outgoing messages. They have a very nice API, and take a lot of the heavy lifting out of creating multipart messages.
+If you are using requests (or treq) to send the messages through their REST API, however, you may have noticed that you must specify &amp;ldquo;attachment&amp;rdquo; as the key, and an open file handle as the value. This works great if you are sending files from the filesystem, but if you need to send generated or in memory data as a file attachment, it just doesn&amp;rsquo;t work.</description>
+    </item>
+    
+  </channel>
+</rss>
