@@ -2,4 +2,11 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
+{{ with site.GetPage "categories/code" }}
+<h3>{{ .Title }}</h3>
+{{range .Pages }}
+<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+<p>{{ .Description }}</p>
+{{ end }}
+{{ end }}
 {{- end }}

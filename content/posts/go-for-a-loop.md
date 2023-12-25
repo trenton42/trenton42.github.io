@@ -2,6 +2,8 @@
 title: "Go For a Loop"
 date: 2019-01-15T21:48:16-05:00
 draft: false
+categories:
+    - code
 tags:
     - go
     - code
