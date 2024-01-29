@@ -6,9 +6,6 @@ resources:
     - name: machine
       src: images/machine.jpg
       title: The Machine
-menu:
-    main:
-        name: Machine
 ---
 
 {{<img "machine" "The machine does not play to the butterfly" >}}
