@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  {{ if eq .Section "posts" }}
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> {{- with .GetTerms "tags" }}
+      {{- range . }}
+        <span class="tag">{{ .LinkTitle }}</span>
+      {{- end }}
+    {{- end }}
+  {{ end }}
+
+  {{ .Content }}
+{{ end }}

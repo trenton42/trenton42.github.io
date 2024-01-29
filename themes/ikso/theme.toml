@@ -1,0 +1,18 @@
+name = 'ikso'
+license = 'MIT'
+licenselink = 'https://github.com/trenton42/trenton42.github.com/themes/ikso/LICENSE'
+description = 'It is not pretty'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/trenton42/trenton42.github.com'
+
+# Taxonomy terms
+tags = ['personal']
+features = ['none']
+
+
+# If the theme has a single author
+[author]
+  name = 'Trenton Broughton'
+  homepage = 'https://ikso.us'
+
