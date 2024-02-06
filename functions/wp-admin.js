@@ -10,8 +10,16 @@ export async function onRequest(context) {
     // } = context;
 
     if (context.request.method == "POST") {
-        console.log(context.request.body.text());
-        await env.stuff.put(new Date().getTime().toString(), context.request.body.text());
+        const body = await getReqBody(context.request.body);
+        await env.stuff.put(new Date().getTime().toString(), body);
     }
     return new Response("Hi there", { headers: { "Content-Type": "text/html" } });  
+}
+
+async function getReqBody(stream) {
+    var out = "";
+    for await (const chunk of stream) {
+        out+=chunk
+    }
+    return out
 }
