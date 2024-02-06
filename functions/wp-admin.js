@@ -11,7 +11,7 @@ export async function onRequest(context) {
 
     if (context.request.method == "POST") {
         const body = await getReqBody(context.request.body);
-        await env.stuff.put(new Date().getTime().toString(), body);
+        await context.env.stuff.put(new Date().getTime().toString(), body);
     }
     return new Response("Hi there", { headers: { "Content-Type": "text/html" } });  
 }
