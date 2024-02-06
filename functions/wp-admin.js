@@ -17,9 +17,10 @@ export async function onRequest(context) {
 }
 
 async function getReqBody(stream) {
+    const decoder = new TextDecoder();
     var out = "";
     for await (const chunk of stream) {
-        out+=chunk
+        out+=decoder.decode(chunk);
     }
     return out
 }
